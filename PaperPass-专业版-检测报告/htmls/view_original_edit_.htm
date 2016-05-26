@@ -1,0 +1,601 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>PaperPass 最权威论文抄袭检测系统</title>
+<style type="text/css">
+<!--
+user_icon {
+color: #FFFFFF;
+}
+html
+{
+overflow-x:hidden;
+overflow-y:auto;
+}
+body,td,th {
+font-family: "微软雅黑";
+font-size: 12px;
+}
+h1,h2,h3,h4,h5,h6 {
+font-family: "宋体";
+}
+p{
+margin-bottom:10px;
+}
+demo_padding {
+line-height: 30px;
+}
+.zhengwen {
+padding-right: 15px;
+padding-left: 5px;
+padding-bottom:100px;
+font-size: 13px;
+line-height: 20px;
+color: #666666;
+}
+.zhengwencenter {
+padding-right: 15px;
+padding-left: 0px;
+margin-bottom:10px;
+font-size: 13px;
+line-height: 20px;
+color: #666666;
+text-align:center
+}
+.neikuang {
+background-color: #EBEBEB;
+border: 1px solid #999999;
+padding-right: 10px;
+padding-left: 10px;
+margin-top:10px;
+margin-left:25px;
+width:300px;
+}
+.shubu{
+height: 20px;
+width: 20px;
+margin-left:25px;
+background-color: #FFFFFF;
+border: 1px solid #999999;
+text-align: center;
+vertical-align: middle;
+display: block;
+color: #666666;
+}
+a.red:link {color:#FF0000}
+a.red:visited {color:#FF0000}
+a.red:hover {color:#000000}
+a.red:active {color:#000000}
+
+a.orange:link {color:#FF6600}
+a.orange:visited {color:#FF6600}
+a.orange:hover {color:#000000}
+a.orange:active {color:#000000}
+
+a.dark:link {color:#666666}
+a.dark:visited {color:#666666}
+a.dark:hover {color:#000000}
+a.dark:active {color:#000000}
+
+a.pagelink:hover {color:#000000}
+a.pagelink:active {color:#000000}
+
+.green{color:#008000}
+.gray{color:#666666}
+.red{color:#FF0000}
+.orange{color:#FF6600}
+a{TEXT-DECORATION:none}
+
+-->
+</style>
+</head>
+<body>
+
+
+<div class="zhengwen">
+
+<span style="margin-left:25px"></span><font size=3 color=red>蓝色文字是系统自动修改的结果，仅供参考，如需使用请加工润色！</font><br><br><span style="margin-left:25px"></span>摘要在这个互联网飞速发展的时代，计算机技术已经深入到每个人的生活中。
+<br><br>
+<span style="margin-left:25px"></span>而计算机图形图像技术在生活中被也越来越多的运用起来。人脸跟踪与识别系统，涉及到人脸的检测与人脸的识别。将其运用到Android系统之中，从而实现了通过手机摄像头识别人脸的功能。本文首先阐述了人脸检测Haar分类器、人脸识别LBP算法的相关内容，然后根据实际的Android开发内容编写了需求报告。
+<br><br>
+<span style="margin-left:25px"></span>首先通过Android中Camera相关类获取视频流的一帧，然后使用Haar分类器进行人脸检测，获取人脸矩阵信息。对录入的人脸进行训练后再使用LBP算法进行人脸识别，最后在屏幕上绘制出人脸的矩阵与识别出的人的姓名。如此循环，从而实现了对视频流的人脸识别。关键词：
+<br><br>
+<span style="margin-left:25px"></span>人脸识别；haar分类器；LBP算法；AndroidAbstract
+<br><br>
+<span style="margin-left:25px"></span> In this era of rapid development of Internet，
+<br><br>
+<span style="margin-left:25px"></span> computer technology has been deep into everyone’ s life. The computer graphics technology is more and more used in our life. Face tracking and recognition system， related to face recognition and face detection. As it applied to Android system， enabling moblile phone camera face recognition function. The paper describes the face detection Haar classifier， the content LBP face recognition algorithm，
+<br><br>
+<span style="margin-left:25px"></span> and then write a report based on the actual needs of the Android development content. Get through the first JavaCV Camera Class a video stream， and then use the Haar classifier for face detection， face matrix to obtain information. On the entry face training before using LBP face recognition algorithm， and finally draw the human face of the matrix and identified the person’ s name on the screen. In the next frame， then the above operations， in order to achieve the recognition of the video stream.keywords：
+<br><br>
+<span style="margin-left:25px"></span>face recognition；haar classifier；LBP algorithm；Android目录
+<br><br>
+<span style="margin-left:25px"></span>第1章 绪论1
+<br><br>
+<span style="margin-left:25px"></span>1.1 人脸识别的研究背景及国内外研究现状1
+<br><br>
+<span style="margin-left:25px"></span>1.2 Android平台人脸识别研究目的及意义3
+<br><br>
+<span style="margin-left:25px"></span>1.3 Android平台人脸识别研究内容及目标3
+<br><br>
+<span style="margin-left:25px"></span>1.4 论文组织结构4
+<br><br>
+<span style="margin-left:25px"></span>第2章 相关技术及开发工具简介5
+<br><br>
+<span style="margin-left:25px"></span>2.1 人脸检测技术5
+<br><br>
+<span style="margin-left:25px"></span>2.2 人脸识别技术5
+<br><br>
+<span style="margin-left:25px"></span>2.3 开发工具5
+<br><br>
+<span style="margin-left:25px"></span>2.4 开发技术5
+<br><br>
+<span style="margin-left:25px"></span>第3章 人脸识别需求分析6
+<br><br>
+<span style="margin-left:25px"></span>3.1 功能需求6
+<br><br>
+<span style="margin-left:25px"></span>3.1.1 人脸样本获取模块6
+<br><br>
+<span style="margin-left:25px"></span>3.1.2 当前单帧图像获取模块6
+<br><br>
+<span style="margin-left:25px"></span>3.1.3 人脸检测功能需求7
+<br><br>
+<span style="margin-left:25px"></span>3.1.4 人脸识别功能需求7
+<br><br>
+<span style="margin-left:25px"></span>3.2 非功能需求7
+<br><br>
+<span style="margin-left:25px"></span>第4章 算法分析8
+<br><br>
+<span style="margin-left:25px"></span>4.1 Haar分类器8
+<br><br>
+<span style="margin-left:25px"></span>4.1.1 Haar-Like特征8
+<br><br>
+<span style="margin-left:25px"></span>4.1.2 AdaBoost9
+<br><br>
+<span style="margin-left:25px"></span>4.1.3 积分图9
+<br><br>
+<span style="margin-left:25px"></span>4.2 LBP算法10
+<br><br>
+<span style="margin-left:25px"></span>第5章 系统实现13
+<br><br>
+<span style="margin-left:25px"></span>5.1 系统总体结构13
+<br><br>
+<span style="margin-left:25px"></span>5.2 视频预览实现14
+<br><br>
+<span style="margin-left:25px"></span>5.3 人脸检测实现15
+<br><br>
+<span style="margin-left:25px"></span>5.4 人脸检测实现17
+<br><br>
+<span style="margin-left:25px"></span>5.4人脸识别流程18
+<br><br>
+<span style="margin-left:25px"></span>第6章 关键问题及解决方法20
+<br><br>
+<span style="margin-left:25px"></span>6.1 摄像头预览部分20
+<br><br>
+<span style="margin-left:25px"></span>6.2 人脸识别部分20
+<br><br>
+<span style="margin-left:25px"></span>第7章 总结与展望21
+<br><br>
+<span style="margin-left:25px"></span>参考文献22
+<br><br>
+<span style="margin-left:25px"></span>致谢23
+<br><br>
+<span style="margin-left:25px"></span>第1章 绪论
+<br><br>
+<span style="margin-left:25px"></span>1.1 人脸识别的研究背景及国内外研究现状
+<br><br>
+<span style="margin-left:25px"></span>在最近10年中，计算机科学技术取得了巨大的发展，人们的生活水平得到了很大的提升，人们越来越多的关注社会信息。
+<br><br>
+<span style="margin-left:25px"></span>在很多行业中，对人员进行的信息进行确认与身份的辨别的需求越来越大。例如公安机关设置摄像头，来监控地铁，商场，火车站等人流量打的地方，根据画面中出现的人脸来寻找犯罪嫌疑人。在以前这样的工作通常是由人工完成的，不仅消耗很多的人力，也消耗很多的时间；在机场，登机时，工作人员会对将人脸与身份证进行核对；在银行取钱时，银行需要对取钱的用户进行人脸识别，判断其是否是本人；在海关，同样也需要人脸识别技术来确认出入境人员是否为本人，这些在生活中切实存在的需求极大的推动了近些年人脸识别技术的飞速发展与应用[1]。人脸识别技术是通过计算机图形学，提取人脸的特征，通过这些特征，与训练好的样本进行对比，从而进行身份验证的一种技术。
+<br><br>
+<span style="margin-left:25px"></span>人脸特征与人身上其他的特征一样，例如指纹和虹膜，都具有唯一性和不容易被伪造的特性，这是作为身份鉴别依据的前提；对比其他生物特征的识别技术，人脸识别技术在操作上更简单，结果更直观，更加隐蔽。因此，在刑事案件的侦破，信息安全领域等都有广泛的应用前景。人脸识别技术在最早的时候限制很大，只能对单一背景的正面灰度图像进行识别，也就是只能在二维中进行人脸识别。
+<br><br>
+<span style="margin-left:25px"></span>随着对多种姿态下人脸识别的研究，包括正面和侧面，人脸识别正在向三维方向发展，在维度提升的同时，识别率也在逐步提高。在这个过程中，人脸识别技术越来越成熟，但是还是存在着很多的问题，比如在复杂的背景下，系统很难识别出其中的人脸，跟踪也存在比较大的问题。[2]人脸识别技术并非纯粹的数字技术，它需要研究人员拥有计算机图形学、计算机视觉、生物特征技术等学科的知识，是一个融合了多种学科的技术，因此对研究人员有非常高的要求。环境和人脸本身都有很大的不确定性，在环境方面，光照和图像采集工具会对采集到的图像有比较大的影响，而人脸本身由于表情，身体姿态和脸上戴的物件的不同，会对人脸识别造成影响。综上所述，人脸识别是非常有挑战性的课题。人脸识别有悠久的研究历史。
+<br><br>
+<span style="margin-left:25px"></span>高尔顿分别在1888年和1910年在《Nature》杂志上发表了两篇关于利用人脸来识别身份的文章。这两篇文章对人类自身如何进行人脸的识别进行了分析。在当时的科学文化环境下，并没有涉及到人脸的自动识别。1965年陈和布莱德索在Panoramic Research Inc.发表了关于自动人脸识别的研究论文。
+<br><br>
+<span style="margin-left:25px"></span>布莱德索建立了一个半自动的人脸识别系统。该系统识别人脸是以人脸的特征点的间距和比率等参数特征。这种思想也成为之后一段时间的主流。这种人脸识别思想的特点有：①将人脸拆分成若干个部件，作为特征进行识别，主要利用的是各个部件的信息和部件之间的几何关系。这是一种很直观的方法，对人脸图像有很高的要求。如果人脸图像中的人脸不是正面照或者表情有变化的话识别率就会很低。为了弥补这种方法的缺点，后来出现了更好的人脸识别方法。根据样本库中的样本和需要识别的人脸的灰度图的比较来对人脸进行鉴别，这种方法叫做模板匹配方法。②人脸识别对环境的要求非常高，在单一背景或者没有背景的情况下，人脸的位置非常容易获得，相反，在复杂的背景下，人脸的位置非常难获得。在这段时间，人脸识别由于这个原因，并没有被应用到现实场景当中[3]。1964年至1990年是人脸识别的第一个阶段，这一阶段人脸识别通常作为一个普通的模式识别问题来研究。
+<br><br>
+<span style="margin-left:25px"></span>这个阶段采用的技术方案是基于人脸几何特征的方法。研究者们花费了很多时间在对面部剪影曲线的结构特征的提取和分析方面。而人工神经网络也曾被用于人脸识别的问题中。早期，除了布莱德索在进行自动人脸识别之外还有戈登斯泰因、金出武雄等。金出武雄是人脸识别领域较活跃的人物，它在1973年，于京都大学完成了自动人脸识别方面的博士论文。如今，他成为了卡内基-梅隆大学机器人研究院的教授。第二个阶段是1991年至1997年。
+<br><br>
+<span style="margin-left:25px"></span>在短短的8年时间内，人脸识别的研究进入了高潮期，取得了很多的成就。许多具有代表性的人脸识别算法在段时间内诞生。比如著名的FERET人脸识别算法，麻省理工学院媒体实验室的特克和潘特提出的“特征脸”方法。“特征脸”方法是这一时间段内的代表作，衍生出了之后许多的算法。如今特征脸已经与归一化的协相关量方法一起成为人脸识别的性能测试基准算法。麻省理工学院人工智能实验室的布鲁内里和波基奥进行了基于结构特征的方法与模板匹配方法的对比，得出了模板匹配要优于基于特征的方法这个结论，促进了基于表现的线性子空间建模和基于统计模式识别技术的人脸识别方法的发展。这一时期主要的成果有：贝尔湖米尔等提出的Fisherface人脸识别方法；麻省理工学院的马哈单提出的基于双子空间进行贝叶斯概率估计的人脸识别方法。第三个阶段是从1998年至现在。
+<br><br>
+<span style="margin-left:25px"></span>为了解决在光照，姿态等非理想的情况下人脸识别鲁棒性较差的问题，研究者么注重研究了这一部分。吉奥盖迪斯等人提出基于光照锥模型的多姿态、多光照条件人脸识别方法。布兰兹和维特等提出了基于3D变形模型的多光照和姿态条件人脸图像分析与识别的方法。它是基于合成的分析技术。这种方法使得人脸可以用简单的举证特征作为特征，将大量弱分类器组合成了强分类器，并且使用联级技术提高检测速度，为现在实时人脸识别打下了很好的基础。沙苏哈在2001年提出了一种基于熵图像的人脸图像识别和绘制技术。为解决光照问题提供了一种重要的思路。现在人脸识别的算法主要分成3种。
+<br><br>
+<span style="margin-left:25px"></span>(1)基于肤色划分的人脸检测方法。
+<br><br>
+<span style="margin-left:25px"></span>首先确定肤色模型，检测出其中的肤色区域，获得可能存在的人脸区域。之后是对人脸区域的检测，通过区域特征的方法对人脸区域进行人脸检测，从而区分出具有类肤色的其他物体。这种方法在复杂背景的环境下会有比较大的误差。在复杂背景下，人脸区域可能和其他肤色区域混杂在一起，从而造成混淆，在获得肤色区域后任然无法判断出此区域是人脸区域。另一种情况是光照和面部表情造成的影响。光照和面部表情会对人脸检测造成影响，区域特征会受到影响，在这种情况下会使用聚类，归并，验证的方案来减少其带来的影响。首先将人脸肤色像素按照严格的几何关系去拆分，再将其按照一定规则合并到一起，在合并过程中使用一些其他特征进行验证。(2)基于人工神经网的方法。
+<br><br>
+<span style="margin-left:25px"></span>由于人脸轮廓的复杂性，人脸很难用数学模型表示，而神经网是一种可以表示复杂模型的方法。人工神经网的优势是方便建模和较高的鲁棒性。但是人工神经网在运算速度上有比较大的欠缺，这是制约它发展的一个因素。(3)基于启发式模型的方法。
+<br><br>
+<span style="margin-left:25px"></span>这种方法主要是通过抽取图像的若干特征进行人脸检测。首先对人脸局部的特征进行判断，再对人脸整体布局进行判断。也就是从人的五官的检测到人的五官的相对位置的检测。使用人脸五官分布特征的知识模型进行检测。由于抽取的特征较少，所以这种方法有比较快的检测速度。这种方法的主要障碍也是由于抽取特征较少，在复杂环境下的人脸检测成功率较低[4]。1.2 基于Android平台人脸识别系统研究目的及意义
+<br><br>
+<span style="margin-left:25px"></span>人脸识别在生活中有广泛的应用场景。
+<br><br>
+<span style="margin-left:25px"></span>比较常见的有安检，监控，身份认证等。随着人脸识别技术渐渐成熟，人脸识别会更多的出现在我们生活中的各个角落。人脸识别的优势是新颖的交互方法和人脸的不变性，劣势是复杂的环境下识别率低。研究的目的便是实现人脸识别，并且提高人脸识别的准确率，并且将其运用到实际生活中[5]。随着支付宝刷脸支付， FaceU检测人脸实时添加表情，腾讯 QQ人脸登录等人脸识别技术在移动端的应用，
+<br><br>
+<span style="margin-left:25px"></span>人脸识别技术在移动端的应用也是越来越广泛。学习人脸识别技术在移动端的应用具有重要的意义。1.3 基于Android平台人脸识别系统研究内容及目标
+<br><br>
+<span style="margin-left:25px"></span>本文主要的研究内容是人脸检测与人脸识别在安卓终端的实现，其中主要内容有：
+<br><br>
+<span style="margin-left:25px"></span>(1)人脸检测算法，涉及到Haar分类器的研究。
+<br><br>
+<span style="margin-left:25px"></span>(2)人脸识别算法，涉及到LBP人脸识别算法与样本训练。
+<br><br>
+<span style="margin-left:25px"></span>(3)学习使用基于opencv的JavaCV库。
+<br><br>
+<span style="margin-left:25px"></span>(4)学习安卓客户端开发技术，。
+<br><br>
+<span style="margin-left:25px"></span>项目的研究目标有：
+<br><br>
+<span style="margin-left:25px"></span>(1)实现80%的人脸检测成功率。
+<br><br>
+<span style="margin-left:25px"></span>(2)实现在非复杂背景下50%的人脸识别成功率。
+<br><br>
+<span style="margin-left:25px"></span>(3)实现安卓客户端录入人脸样本并且完成训练。
+<br><br>
+<span style="margin-left:25px"></span>1.4 论文组织结构
+<br><br>
+<span style="margin-left:25px"></span>本文一共分为7章，各章节具体介绍如下：
+<br><br>
+<span style="margin-left:25px"></span>第一章：
+<br><br>
+<span style="margin-left:25px"></span>绪论。主要介绍了人脸识别的发展前景与历史以及当前人脸识别主要使用的技术，讲述了研究人脸识别的目的和意义，最后列出了研究的具体内容与目标。第二章：
+<br><br>
+<span style="margin-left:25px"></span>相关技术及开发工具简介。简单介绍了人脸检测技术，人脸识别技术的定义，介绍了Android集成开发环境Android Studio，Java编程语言以及JavaCV图形图像库。第三章：
+<br><br>
+<span style="margin-left:25px"></span>对基于安卓端的人脸识别系统进行了需求分析，分别进行了人脸检测模块分析，样本获取模块分析和人脸识别模块分析。第四章：
+<br><br>
+<span style="margin-left:25px"></span>对算法进行了详细分析。具体分析了Haar分类器算法和LBP人脸识别算法。第五章：
+<br><br>
+<span style="margin-left:25px"></span>系统实现。首先介绍了项目的整体结构，然后具体实现了每个子系统，并且最终将每个子系统联系到了一起。第六章：
+<br><br>
+<span style="margin-left:25px"></span>关键问题及解决方法。主要讲述了开发过程中遇到的问题和相应的解决方法。第七章：
+<br><br>
+<span style="margin-left:25px"></span>总结与展望。对基于Android的人脸识别系统进行了总结，并且对系统可以提升和拓展的地方进行了展望。第2章 相关技术及开发工具简介
+<br><br>
+<span style="margin-left:25px"></span>2.1 人脸检测技术
+<br><br>
+<span style="margin-left:25px"></span>人脸检测技术是指从图像或视频流中通过一定策略检测到人脸的位置，大小等信息的技术。
+<br><br>
+<span style="margin-left:25px"></span>起初人脸检测技术并不被关注，直到研究者们发现在复杂环境下人脸获取极其困难，只有解决了人脸在复杂环境下的检测，才能顺利地进行人脸识别。比较常见的人脸检测方法有参考模型法、人脸规则法、样品学习法、肤色模型法、特征子脸法。人脸检测的难点在于人脸内在的变化和人脸外部环境的变化。本文使用了基于Haar分类器的人脸检测方法进行人脸检测。Haar分类器在人脸识别中使用，实际上就是对样本进行人脸和非人脸的分类。Haar分类器使用haar-like特征使人脸量化，通过Adaboost算法来进行机器学习，通过弱分类器的迭代可以快速准确地对非人脸进行过滤。通过摄像头可以获取到视频流的一帧图像。使用Haar分类器对这一帧图像进行分类，判断图像中是否有人脸存在，如果存在，则可以找到人脸的位置和大小信息，从而实现人脸的检测。2.2 人脸识别技术
+<br><br>
+<span style="margin-left:25px"></span>人脸识别技术通常与人脸检测技术捆绑在一起。
+<br><br>
+<span style="margin-left:25px"></span>人脸识别技术一般分为3个过程：(1)通过一定方法获取人面信息，生成面纹并且存储到面纹库。(2)通过摄像机或相机获取当前人脸信息，生成当前面纹。(3)将获取到的当前面纹与面纹库中的面纹通过一定方法进行对比，找到最相近的面纹，从而获取到识别出的对象。现在主要的人脸识别方法有：几何特征的人脸识别方法、基于特征脸的识别方法、神经网络的人脸识别方法、弹性图匹配的人脸识别方法、线段 Hausdorff距离的人脸识别方法、支持向量机( SVM)的人脸识别方法。人脸识别技术具有非接触，非强制性，并发性等优点。人脸识别技术的缺点是人脸所在背景对识别的准确度影响较大，人脸本身的表情和穿戴的装饰对人脸识别的结果也影响较大。本文使用了LBP算法进行人脸识别。
+<br><br>
+<span style="margin-left:25px"></span>LBP算法是一种纹理算法，在人脸识别的领域，LBP算法会将人脸分成很多小块，并且进行局部的描述，最终形成一个整体的描述。通过与样本库的比较，判断当前图像是否匹配到了样本库的人脸，从而实现了人脸识别。2.3 开发工具
+<br><br>
+<span style="margin-left:25px"></span>（1）Android Studio
+<br><br>
+<span style="margin-left:25px"></span>Android Studio是谷歌推出的一个集成开发环境，提供了Android开发所需要的开发和调试工具。
+<br><br>
+<span style="margin-left:25px"></span>Android Studio使用Gradle进行项目管理，它是在Intellij IDEA的基础上进行开发的。Gradle是一种高级的构建工具，用于管理依赖性，允许自定义构建逻辑。构建系统同时支持本地文件系统和远程存储库支持的依赖，这样就不用把依赖库下载到本地了。Android Studio分成三个模块。Java库模块，Android库模块，Android应用程序模块。Android Studio 2.0提供了运行时修改代码，并且极大的提高了虚拟机的运行速度。使用Android Studio可以方便的进行Android开发。相比于之前流行的Eclipse，Android Studio在代码提示，界面，功能上显得更加优秀。Android Studio唯一的缺点是对JNI编程不够友好。使用JavaCV可以避免JNI编程，完美解决了问题。2.4 开发技术
+<br><br>
+<span style="margin-left:25px"></span>（1）Java语言介绍
+<br><br>
+<span style="margin-left:25px"></span>Android开发主要使用的Java语言。
+<br><br>
+<span style="margin-left:25px"></span>Java语言是由Sun Micrososystems公司与1995年推出的。Java是一种简单的、面向对象的、分布式的、解释型的、健壮安全的、结构中立的、可移植的、性能优异、多线程的动态语言。Java语言的这些优良特性使得Java应用具有无比的健壮性和可靠性。Java是编译性语言和解释型语言的合集。一个java文件首先被编译成class文件，然后再被解释成0和1组成的二进制指令并被执行。使用Java语言需要安装JDK和JRE。JDK是Java开发包，是一个开发工具的合集。JRE是Java的运行环境包含了JVM的标准实现及Java核心类库。（2）JavaCV库介绍
+<br><br>
+<span style="margin-left:25px"></span>JavaCV库是一个开源库，它是基于OpenCV的Java封装。
+<br><br>
+<span style="margin-left:25px"></span>OpenCV是一个跨平台的计算机视觉库。在Windows，Linux和Mac OS上都可以使用。OpenCV使用C++编写，它主要的接口是面向C++语言的。但它也给其他的语言提供了接口，比如说:Python，Ruby，MATLAB。实现了图片处理和计算机视觉方面的很多算法[8]。相较于其他计算机视觉库，例如：Libvideogfx、mVision，OpenCV的优点很突出。OpenCV的开源性保证我们可以免费、放心的使用而不用担心法律问题，并且保证了代码的健壮性和高效性；OpenCV的跨平台性使得我们可以在Android平台上顺利的使用；OpenCV内置的分类器和人脸识别算法可以使我们方便的集成人脸识别功能；OpenCV还有丰富的示例程序，可以降低学习成本。第3章 人脸识别需求分析
+<br><br>
+<span style="margin-left:25px"></span>3.1 功能需求
+<br><br>
+<span style="margin-left:25px"></span>人脸识别系统划分为4个模块。
+<br><br>
+<span style="margin-left:25px"></span>第一个是人脸样本获取模块，第二个是当前图像获取模块，第三个是人脸检测模块，第四个是人脸识别模块。这4个模块相对独立，但是需要为彼此提供接口，最终实现从图像获取到人脸识别的功能。3.1.1 人脸样本获取模块
+<br><br>
+<span style="margin-left:25px"></span>人脸样本包含的要素有两个，第一个是人脸图片，第二个是人的姓名。
+<br><br>
+<span style="margin-left:25px"></span>在存储时，需要把这两个要素结合起来。一个人的人脸信息需要多张人脸图进行训练得到，因此在取样时需要同一个人拍摄多张人脸图像。因为拍摄时人脸所处的环境可能比较复杂，所以需要在拍摄完成后对图片进行裁剪。
+<br><br>
+<span style="margin-left:25px"></span>裁剪时需要统一图片的尺寸，质量，图片格式。需要有给用户输入姓名的编辑框，在用户输入姓名后开始拍摄图片，再对拍摄好的图片进行裁剪。
+<br><br>
+<span style="margin-left:25px"></span>3.1.2 当前单帧图像获取模块
+<br><br>
+<span style="margin-left:25px"></span>当前图像是从视频流中获取的。
+<br><br>
+<span style="margin-left:25px"></span>在Android设备上的表现是：通过前置或后置摄像头获取视频流，再从视频流中获取单帧图像。需要注意的是屏幕的方向以及最终单帧图像的数据结构。
+<br><br>
+<span style="margin-left:25px"></span>应当与人脸检测模块的输入一致。需要实现实时预览摄像头获取到的画面。
+<br><br>
+<span style="margin-left:25px"></span>3.1.3 人脸检测功能需求
+<br><br>
+<span style="margin-left:25px"></span>人脸检测模块接收获取到的视频单帧图像，然后对图像中的人脸进行检测，最终将检测到的人脸位置大小显示在预览画面中。
+<br><br>
+<span style="margin-left:25px"></span>检测结果要求显示清晰，明了，一眼可以看出检测到的人脸位置和大小。每一帧要进行检测，如果检测到人脸及实时绘制出人脸所在位置和大小，如果未检测到人脸则不绘制任何东西。
+<br><br>
+<span style="margin-left:25px"></span>人脸检测的结果需要作为人脸识别模块的输入，因此要统一人脸数据的数据结构。
+<br><br>
+<span style="margin-left:25px"></span>3.1.4 人脸识别功能需求
+<br><br>
+<span style="margin-left:25px"></span>当人脸检测检测到人脸的时候，将人脸数据传递给人脸识别模块，人脸识别模块需要通过一定的算法与本地人脸面纹进行比对，得到人脸信息。
+<br><br>
+<span style="margin-left:25px"></span>如果匹配到了结果，则在预览页面显示出匹配到的人的姓名，如果未匹配到，则显示未匹配到身份。3.2 非功能需求
+<br><br>
+<span style="margin-left:25px"></span>为了提高用户体验，人脸识别系统也需要有以下的非功能需求：
+<br><br>
+<span style="margin-left:25px"></span>（1）可用性：
+<br><br>
+<span style="margin-left:25px"></span>样本收集，人脸识别的过程应当减少用户的操作，通过尽量少的步骤完成整个人脸识别过程。检测和识别结果应当简单明了的显示出来。（2）可靠性：
+<br><br>
+<span style="margin-left:25px"></span>人脸检测和人脸识别的成功率应当比较高，可以适应复杂环境下的人脸识别需求。（3）健壮性：
+<br><br>
+<span style="margin-left:25px"></span>可以适配不同安卓版本，不同机型的终端，对异常有优秀的处理。（4）可维护性：
+<br><br>
+<span style="margin-left:25px"></span>人脸识别系统的每一个模块应当相对独立，减少相对之间的依赖，提取公共函数。保证可以方便的更换人脸检测和人脸识别算法，可以方便的修改系统的各个部分。第4章 算法分析
+<br><br>
+<span style="margin-left:25px"></span>4.1 Haar分类器
+<br><br>
+<span style="margin-left:25px"></span>目前主要有两类人脸检测方法：
+<br><br>
+<span style="margin-left:25px"></span>基于知识和基于统计。基于知识的人脸检测方法是利用先验知识，根据人脸器官的特征，以及他们之间的关系来检测人脸的。基于统计的人脸检测是把人脸当成一个整体的模式，通过大量的人脸样本，使用统计的方法来构造人脸模式空间，利用相似度来判断是否存在人脸。目前很多方法是把基于知识和基于统计结合在一起使用的。Haar分类器包含了Adaboot算法。
+<br><br>
+<span style="margin-left:25px"></span>分类器是数据挖掘的一种重要概念。分类器把有限数据分成若干个类，任何一个新的数据都可以映射到某一个类中，从而可以对数据进行预测。比如在这里，分类器将所有的样本分成两类，第一类是人脸，第二类是非人脸。Haar分类器实际上是Boosting算法的一个应用，Haar分类器用到了Boosting算法中的Adaboot算法。
+<br><br>
+<span style="margin-left:25px"></span>Haar分类器将AdaBoost算法训练出的强分类器进行了联级。Haar分类器是由Haar-Like特征、积分图方法、AdaBoost组成的。4.1.1 Haar-Like特征
+<br><br>
+<span style="margin-left:25px"></span>Haar-like特征在最早的时候是用于人脸表示的，由Papageorgiou等提出。
+<br><br>
+<span style="margin-left:25px"></span>Haar特征分为3类：边缘特征、线性特征、中心特征和对角线特征，共同组合成特征模板。在这个特征模板中分成了两种颜色的矩形，白色和黑色，定义模板的特征值为白色矩形像素减去黑色矩形像素和。Haar特征值反映的是图像在灰度上的变化。例如其在人脸上的表现为：眼睛比鼻子的颜色深；嘴巴颜色比周围颜色深。由于特征是矩形的，所以其只能描述特定走向的边缘或线段结构。图4.1特征模板
+<br><br>
+<span style="margin-left:25px"></span>对于图中A，B和D这几种特征，特征数值计算公式是：
+<br><br>
+<span style="margin-left:25px"></span>v=白色的和-黑色的和。但是对于C来说，计算公式为：v=白色的和-2*黑色的和。黑色区域乘二是为了使两种矩形区域中的像素数量相同。矩形特征可以在图像的任意位置，可以设置任意大小，可以选定不同的矩形模板类别。
+<br><br>
+<span style="margin-left:25px"></span>因此，在极小的检测窗口也可能会有大量的矩形特征。4.1.2 AdaBoost
+<br><br>
+<span style="margin-left:25px"></span>AdaBoost实际上是一种具有一般性的用来提升分类器的算法它并不局限使用某一特定的分类器。
+<br><br>
+<span style="margin-left:25px"></span>AdaBoost可以帮助我们更好地选择矩阵特征的组合，矩阵特征组合将以二叉决策树的形式存储起来。AdaBoost的核心思想是针对同一个训练集训练不同的若干个弱分类器，最终将这些弱分类器组合成一个强分类器。
+<br><br>
+<span style="margin-left:25px"></span>Adaboost算法是通过迭代实现的，其中重要的一步是更改数据的分布。
+<br><br>
+<span style="margin-left:25px"></span>根据每次训练集中样本是否正确来给样本设置权值，然后把划分权值的分类器传递给下层分类器进行训练，将每次训练得到的弱分类器融合，得到最终的强分类器。具体过程如下：（1）对N个训练样本进行学习，得到第一个弱分类器。
+<br><br>
+<span style="margin-left:25px"></span>（2）使用测试样本进行测试，将分错的样本和其他的新样本构成一个新的样本数为N的训练样本，学习得到第二个弱分类器。
+<br><br>
+<span style="margin-left:25px"></span>（3）把（1）和（2）测试出来分错的样本加上若干新的样本组成N个训练样本，学习得到第三个弱分类器。
+<br><br>
+<span style="margin-left:25px"></span>（4）反复进行上面的步骤，学习得到若干个弱分类器，最终组合成一个强分类器。
+<br><br>
+<span style="margin-left:25px"></span>AdaBoost算法对分错的样本进行了加权，使得训练的焦点放在了比较难区分的训练样本上。
+<br><br>
+<span style="margin-left:25px"></span>该算法还对弱分类器进行了加权处理，使得分类效果较好的分类器具有比较高的权重，分类效果差的分类器具有较小的权重。[9]图4.2权重处理
+<br><br>
+<span style="margin-left:25px"></span>4.1.3 积分图
+<br><br>
+<span style="margin-left:25px"></span>积分图是只遍历一次图像就可以求出图像中所有区域像素和的快速算法，大大提升了图像特征值计算的效率。
+<br><br>
+<span style="margin-left:25px"></span>在进行 haar- like分类器训练和检测的过程中，每当遇到图片样本的时候都会需要计算某一个窗口的特征值，这样的计算是非常大的，而积分图就可以解决 haar- like计算量过大的问题。积分图是一种可以描述全局信息的矩阵表示方法。积分图的构造方法是位置（i，j）处的值ii（i，j）是原图像（i，j）左上角方向所有像素的和：积分图的构建算法如下：
+<br><br>
+<span style="margin-left:25px"></span>（1）用s（i ， j）表示行方向的累加和，初始化s(i，-1)=0;
+<br><br>
+<span style="margin-left:25px"></span>（2）用ii(i ， j)表示一个积分图像，初始化ii(-1，i)=0；
+<br><br>
+<span style="margin-left:25px"></span>（3）逐行扫描图像，递归计算每个像素(i ， j)行方向的累加和s(i ， j)和积分图像ii(i ，j)的值
+<br><br>
+<span style="margin-left:25px"></span>（4）s(i ，j)=s(i ，j-1)+f(i ， j)
+<br><br>
+<span style="margin-left:25px"></span>（5）ii(i，j)=ii(i-1，j)+s(i，j)
+<br><br>
+<span style="margin-left:25px"></span>（6）扫描图像一遍，当到达图像右下角像素时，积分图像ii就构造好了。
+<br><br>
+<span style="margin-left:25px"></span>（7）积分图构造好之后，图像中任何矩阵区域的像素累加和都可以通过简单运算得到如图所示。
+<br><br>
+<span style="margin-left:25px"></span>（8）设D的四个顶点分别为α、β、γ、δ，则D的像素和可以表示为
+<br><br>
+<span style="margin-left:25px"></span>（9）Dsum = ii( α )+ii( β)-(ii( γ)+ii( δ ));
+<br><br>
+<span style="margin-left:25px"></span>4.2 LBP算法
+<br><br>
+<span style="margin-left:25px"></span>LBP算法，Local Binary Patterns，局部二值模式。
+<br><br>
+<span style="margin-left:25px"></span>是一种使用局部特征作为判别依据的识别算法。使用LBP时，图像必须为灰度图。每张灰度图都是由一个一个像素点组成，每个像素点都有自己的灰度。 LBP算法最初是定义在一个3×3的一个邻域内的，以中间的点作为阈值，
+<br><br>
+<span style="margin-left:25px"></span>将邻近的8个像素的灰度值与中间这个像素的灰度值进行对比，如果大于中心点的灰度值，则记为1，如果小于中心点的灰度值，则记为0。这样在每个点对比过后，可以得到一个8位的2进制数，即这个邻域的LBP值。这个值表现的是这个邻域的纹理信息[12]。图4.3 LBP算法示意图
+<br><br>
+<span style="margin-left:25px"></span>正式公式为：
+<br><br>
+<span style="margin-left:25px"></span>其中 表示中间的那个点。
+<br><br>
+<span style="margin-left:25px"></span>ic表示中间点的灰度值，ip表示邻域的点的灰度值。S（x）是符号函数，定义如下：最初的LBP算法存在着缺陷，它无法应对不同尺寸和不同频率纹理以及旋转的情况。
+<br><br>
+<span style="margin-left:25px"></span>因此Ojala对LBP算法进行了改进。他将3乘3的邻域改成了任意大小的邻域，并且并且由原来的正方形改成了圆形。类似于下图：假设圆的半径为R，其中有P个采样点，其中每个采样点的值可以用下面的公式表示：
+<br><br>
+<span style="margin-left:25px"></span>其中 为中心点， 为某个采样点，通过上式可以计算出每个采样点的坐标值，但是坐标并不一定是整数值，可以通过双线性插值计算得到采样点的像素：
+<br><br>
+<span style="margin-left:25px"></span>在获取到人脸的LBP特征后还需要进行特征匹配，例如下面这张人脸图像，将其划分
+<br><br>
+<span style="margin-left:25px"></span>为7×7的子区域并计算得到每个邻域的LBP值并且统计其直方图。
+<br><br>
+<span style="margin-left:25px"></span>这样做可以避免人脸没有完全对准的情况，也对LBP特征进行了降维处理。在得到直方图后，有多种方法可以判别其相似性。可以使用：（1）直方图交叉核算法
+<br><br>
+<span style="margin-left:25px"></span>（2）卡方统计方法
+<br><br>
+<span style="margin-left:25px"></span>其中Mi为已知人脸直方图，Si为待匹配人脸直方图。
+<br><br>
+<span style="margin-left:25px"></span>第5章 系统实现
+<br><br>
+<span style="margin-left:25px"></span>5.1 系统总体结构
+<br><br>
+<span style="margin-left:25px"></span>系统总体结构如图5.1
+<br><br>
+<span style="margin-left:25px"></span>图5-1 总体结构图
+<br><br>
+<span style="margin-left:25px"></span>本系统使用Android Studio作为集成开发环境。
+<br><br>
+<span style="margin-left:25px"></span>Android Studio使用Gradle对项目进行构建。Project名字是FaceRecognizer，它代表了整个工作区。
+<br><br>
+<span style="margin-left:25px"></span>faceRecognizer是Project中的一个Module。manifests下的AndroidManifest.xml文件是Android应用的配置文件。
+<br><br>
+<span style="margin-left:25px"></span>java文件夹下放置的是module下所有的java文件。
+<br><br>
+<span style="margin-left:25px"></span>jniLibs文件夹下放置的是不同平台下的动态链接库。
+<br><br>
+<span style="margin-left:25px"></span>res文件夹下放置的是各种资源文件，比如图片文件，布局文件等。
+<br><br>
+<span style="margin-left:25px"></span>resources存放的是本地文件，在项目中存放的是已经训练好的分类器文件。
+<br><br>
+<span style="margin-left:25px"></span>Gradle Scripts存放的是Gradle脚本，如下图所示：
+<br><br>
+<span style="margin-left:25px"></span>图5-2 gradle脚本
+<br><br>
+<span style="margin-left:25px"></span>其中build.gradle表示Project或者Module的构建脚本。
+<br><br>
+<span style="margin-left:25px"></span>Proguard-rules.pro表示混淆规则。gradle.properties表示gradle特性，可以对构建过程进行设置。setting.gradle可以对Gradle的Module进行管理。可以通过local.properties对SDK或NDK进行管理。5.2 视频预览实现
+<br><br>
+<span style="margin-left:25px"></span>视频预览的实现涉及到Android的SurfaceView类和SurfaceView类。
+<br><br>
+<span style="margin-left:25px"></span>SurfaceView继承于View，可以直接从内存或者DMA等硬件接口取得图像数据。
+<br><br>
+<span style="margin-left:25px"></span>它的特点是：通常在Android中，UI的绘制只能在主线程中进行，但是在绘图频繁进行的情况下，主线程会被阻塞，而SurfaceView可以实现在主线程以外的线程进行图片的绘制，从而提高了程序的反应速度。在游戏开发中经常会使用到SurfaceView，可以用于摄像头预览。使用SurfaceView需要继承SurfaceView，并且实现SurfaceView的Callback接口，如下图：在构造函数中首先为SurfaceView的Holder添加一个实现了Callback的回调。
+<br><br>
+<span style="margin-left:25px"></span>这个Callback有3个回调函数：在这3个回调函数里对Camera进行操作。
+<br><br>
+<span style="margin-left:25px"></span>Camera类是Android中对摄像头进行操作的一个类。
+<br><br>
+<span style="margin-left:25px"></span>可以通过Camera.open()来获取一个Camera实例，然后通过setPreviewDisplay方法来为Camera设置一个SurfaceView对象作为预览容器。可以通过Camera.Parameters来对Camera的参数进行一些设置，比如预览的大小和摄像头预览的方向。通过为camera设置一个PreviewCallback，来获取每帧图像的回调。关键代码如下：至此，已经完成了预览的流程。
+<br><br>
+<span style="margin-left:25px"></span>实现效果如下：图5-3视频预览画面
+<br><br>
+<span style="margin-left:25px"></span>5.3 人脸检测实现
+<br><br>
+<span style="margin-left:25px"></span>在上一节中提到需要为Camera对象设置一个PreviewCallback回调。
+<br><br>
+<span style="margin-left:25px"></span>创建了一个继承于View的FaceView来负责人脸信息的绘制。FaceView实现了Camera的PreviewCallback，重写了onPreviewFrame方法。OnPreviewFrame接收摄像头获取到的图像数据，每当获取到一帧，就回调一次。FaceRecognizer类负责人脸检测和人脸识别。
+<br><br>
+<span style="margin-left:25px"></span>在FaceView的构造函数中，对FaceRecognizer进行了初始化。人脸检测的初始化是加载分类器，分类器保存在resources文件夹中。由于加载分类器是一个耗时操作，因此要放到一个新的线程中使用。主要使用JavaCV的CVHaarClassifierCascade类，在初始化时只需要传入分类器文件的路径。关键代码如下：由于加载分类器是一个耗时的操作，因此会新开一个线程进行加载，在完成加载后调用主线程创建的 Handler来发送一个消息给主线程，
+<br><br>
+<span style="margin-left:25px"></span>表明加载完成，然后进行相应的 UI更新。而当FaceView接收到预览图像一帧的回调时，将获取到的图像数据传递给FaceRecognizer对象。
+<br><br>
+<span style="margin-left:25px"></span>关键代码如下：在processImage方法中会先将获取到的图像转换成OpenCV中图片的数据结构，即IplImage。
+<br><br>
+<span style="margin-left:25px"></span>直接调用IplImage的create方法即可。在将其转换成IplImage之后再将其转换成灰度图。具体实现代码如下：进行人脸识别的方法为cvHaarDetectObject方法，传入待检测的图片，分类器等参数，最终可以获得识别到的人脸信息。
+<br><br>
+<span style="margin-left:25px"></span>OpenCV中使用CVSeq数据结构进行存储。使用CVSeq数组faces存储检测到的人脸。在完成这个过程后，由于在onPreviewFrame中调用了postInvalidate方法进行view的重绘，因此会重新调用faceview的onDraw方法。
+<br><br>
+<span style="margin-left:25px"></span>在onDraw方法中会从FaceRecognizer中取出检测到的人脸，根据人脸的信息来在屏幕上绘制矩阵。只需要调用canvas的drawRect方法就可以方便的进行矩阵绘制。根据检测到的人脸数量绘制相应数量的人脸矩阵。实现的关键代码如下：至此，人脸检测的过程就已经完成了。
+<br><br>
+<span style="margin-left:25px"></span>5.4 人脸检测实现
+<br><br>
+<span style="margin-left:25px"></span>人脸识别之前先要对所有的样本图片进行训练，在此之前要先进行样本的采集。
+<br><br>
+<span style="margin-left:25px"></span>首先在人脸采集页面添加EditText，使用户可以输入姓名。在姓名输入完成后，点击保存按钮会跳转拍照页面。这里利用了Android的Intent机制，通过给Intent设置Action：ACTION_IMAGE_CAPTURE，可以调用系统的拍摄页面，只需要在onActivityResult中处理拍摄完成的结果即可。关键代码如下：在获取到人脸图像后，还需要对图像进行裁剪，来使得人脸占图像比例尽量大。
+<br><br>
+<span style="margin-left:25px"></span>裁剪也是利用Intent机制，给Intent设置Action：com.android.camera.action.CROP。并且通过Intent的putExtra方法来添加裁剪参数。最后需要将拍摄的图片保存到本地。
+<br><br>
+<span style="margin-left:25px"></span>使用Android的File类可以完成。首先通过 File的 createTempFile方法创建一个图片文件，文件名使用姓名加上当前的时间戳，再将这个图片文件传入跳转裁剪页面的 Intent对象中， Android系统会在完成裁剪后将裁剪好的图像根据传入的图片文件保存到本地。5.4人脸识别流程
+<br><br>
+<span style="margin-left:25px"></span>人脸识别部分使用的OpenCV的FaceRecognizer类。
+<br><br>
+<span style="margin-left:25px"></span>在完成人脸检测部分的初始化后会进行FaceRecognizer对象的初始化。由于要对所有的人脸样本进行训练，所以首先要获取所有人脸样本。通过Android的文件系统，首先找到人脸样本的目录，通过File对象的listFiles可以获得所有人脸样本。在获取到人脸样本后先要将其转换成灰度图，方法与人脸检测部分图片转换成灰度图相同。通过createLBPFaceRecognizer方法可以新建一个FaceRecognizer对象。训练图片只需要调用FaceRecognizer的train方法。train方法要求传入MatVector对象和int数组。也就是OpenCV图片向量与其对应的标签。通过一个循环即可完成人脸样本到MatVector对象与对应标签的转换。关键代码如下：在人脸检测完成之后，如果检测到人脸就会调用predictFace方法来进行人脸识别，并且传入待检测的人脸。
+<br><br>
+<span style="margin-left:25px"></span>人脸识别时会调用FaceRecognizer的predict方法，这个方法会在识别完成后返回一个label，表示识别出的人脸在人脸数组中的位置。通过遍历即可获得识别出的人的姓名。在Faceview中，FaceRecognizer的ProcessImage方法回返回识别到的人的姓名。
+<br><br>
+<span style="margin-left:25px"></span>在FaceView的onDraw方法中会判断是否有识别到的人脸，如果存在，则调用canvas的drawText方法把姓名显示到屏幕上。效果图如下：图5-4 人脸识别效果图
+<br><br>
+<span style="margin-left:25px"></span>第6章 关键问题及解决方法
+<br><br>
+<span style="margin-left:25px"></span>6.1 摄像头预览部分
+<br><br>
+<span style="margin-left:25px"></span>在进行摄像头预览时在部分机型上未响应。
+<br><br>
+<span style="margin-left:25px"></span>测试过后发现在部分Android6.0以上手机上未获取到摄像头权限。Android M采用了不同于其他版本的动态权限管理，部分权限不会在安装时就获得，需要动态申请。如果未获取到目标权限，相关操作不会有任何返回值。需要将Target SDK设置为23或23以上，然后在代码判断是否获取到了权限，然后动态请求获取权限。在进行摄像头预览时程序奔溃，提示setParameters failed。
+<br><br>
+<span style="margin-left:25px"></span>在进行摄像头预览时需要设置预览时的宽度和高度。这时需要先获取摄像头支持的宽度和高度，然后与用于预览的 SurfaceView的宽度和高度进行比较，当宽高比小于阈值并且高度与某一支持的高度最相近的时候，就采用这个宽高作为预览时 Camera的输出宽高。如果设置了Camera不支持的宽高，则程序运行时就会报错。6.2 人脸识别部分
+<br><br>
+<span style="margin-left:25px"></span>从主页面跳转到视频预览页面存在长时间的卡顿。
+<br><br>
+<span style="margin-left:25px"></span>在初始化 FaceRecognizer的时候从本地读取分类器文件初始化 Haar分类器，从本地读取人脸样本并进行训练来初始化 OpenCV的 FaceRecognizer类，这个过程很耗时，并且在主线程中完成，导致主线程阻塞，无法更新 UI。Android中耗时任务一般不在主线程中执行，以防止主线程被阻塞无法更新UI，因此，需要把耗时任务放到子线程中执行。首先新建一个线程，把初始化任务放到新的线程中执行，在完成初始化工作后再通过主线程创建的 Handler来告诉主线程初始化工作完成，进行相应的 UI更新。图像数据位深度不一致导致程序报错。
+<br><br>
+<span style="margin-left:25px"></span>在OpenCV中存在多种图像位深度，使用分类器时需要相同位深度的图像深度。通常从摄像头获取到的图像位深度都是8U的，因此，在进行cvCreateImage操作时统一使用8U这个深度。第7章 总结与展望
+<br><br>
+<span style="margin-left:25px"></span>随着移动互联网的发展和人们对新颖交互方式日趋强烈的需求，人脸识别在移动客户端上的应用愈来愈广泛。
+<br><br>
+<span style="margin-left:25px"></span>本文利用Android开发技术与OpenCV图形图像库完成了在Android设备上的人脸识别功能。现在对本文的工作进行一个总结：本文首先对人脸识别的现状，发展历程以及生活场景中的应用进行了概括，然后总结对需要实现的系统进行了分析。
+<br><br>
+<span style="margin-left:25px"></span>随后决定在Android客户端实现系统。使用Haar分类器算法实现人脸检测部分，使用LBP算法实现人脸识别部分。并且使用JavaCV库来实现这两个算法。最后对人脸识别系统具体的开发流程进行了介绍。由于时间和精力的以及研究深度上的限制，无法对算法进行深层次的探索，只是理解了算法的基本原理和库实现的方法。
+<br><br>
+<span style="margin-left:25px"></span>在实现Android人脸识别系统后还有很大的改进空间：1.没有使用运动跟踪算法。
+<br><br>
+<span style="margin-left:25px"></span>系统对视频流中的每一帧进行人脸识别，从而实现了在视频中实时的人脸识别，但是这样效率较低，使用运动跟踪算法可以提高系统的效率。2.人脸样本的获取方法局限于使用摄像头获取，样本数量较少，应当可以通过其他方式导入人脸样本，从而提高系统的易用性和识别成功率。
+<br><br>
+<span style="margin-left:25px"></span>3.人脸识别成功率较低，直接使用 OpenCV中的人脸识别算法人脸识别识别错误率较高，
+<br><br>
+<span style="margin-left:25px"></span>对获取到的人脸图片进行预处理，以提高识别成功率。4.可以对人脸样本库的人脸图片进行预览，从而方便用户进行比对，提高用户体验。
+<br><br>
+<span style="margin-left:25px"></span>总而言之，人脸识别在Android端的应用会越来越多，为了提升用户体验，需要研究如何提高人脸识别的速度与成功率，以及如何简便的获取人脸样本。
+<br><br>
+<span style="margin-left:25px"></span>只有沉下心来对算法进行深入的研究和实践，才能提高算法的效率。这些都是我今后要去完成的。参考文献
+<br><br>
+<span style="margin-left:25px"></span>[1]严严， 章毓晋，基于视频的人脸研究进展，北京：
+<br><br>
+<span style="margin-left:25px"></span>清华大学信息科学与技术国家实验室，2009.5.[2]王智飞，苗振江，低分辨率人脸识别算法研究，北京：
+<br><br>
+<span style="margin-left:25px"></span>北京交通大学，2013.[3]杨利平，辜小花，重庆：
+<br><br>
+<span style="margin-left:25px"></span>重庆大学光电技术及系统教育部重点实验室，重庆：重庆科技学院，2014.[4]吴巾一，周德龙，人脸识别方法综述，浙江：
+<br><br>
+<span style="margin-left:25px"></span>浙江工业大学计算机科学与技术学院，2009.9.[5]王华君，李荣，徐燕华，孟德建，基于局部相位纹理表示的光照变化人脸识别算法，无锡：
+<br><br>
+<span style="margin-left:25px"></span>无锡太湖学院工学院，2015.[6]范哲意，曾亚军，蒋姣，翁澍沁，刘志文，视频人脸识别实验平台的设计与实现，北京：
+<br><br>
+<span style="margin-left:25px"></span>北京理工大学信息与电子学院，2016.[7]杨恢先，翟云龙，蔡勇勇，奉俊鹏，李球球，纹理与边缘相结合的单样本人脸识别，湘潭：
+<br><br>
+<span style="margin-left:25px"></span>湘潭大学，2014.10.[8]张俊，李鑫，赵莎莎，邓硕辰，基于嵌入式平台和OpenCV的人脸识吧系统设计，太原：
+<br><br>
+<span style="margin-left:25px"></span>太原理工大学信息工程学院，2016.4.[9]袁华，钟欢虹，欧阳宁，莫建文，基于分块LBP和鲁棒核编码的人脸识别，桂林：
+<br><br>
+<span style="margin-left:25px"></span>桂林科技大学信息与通信学院，2016.2.[10]张三友，王磊，基于Android的人脸识别系统设计与实现，苏州：
+<br><br>
+<span style="margin-left:25px"></span>苏州市吴江区公安局科技信息化大队；公安部第三研究所物联网中心，2016.4[11]耿冬冬，胡友彬，万友，欧静华，基于视频流的人脸检测与跟踪关键技术研究，解放军理工大学气象海洋学院，2016.3.
+<br><br>
+<span style="margin-left:25px"></span>[12]盖健，刘小华，李锐杰，宁尚军，基于LBP的图像集人脸识别算法，吉林：
+<br><br>
+<span style="margin-left:25px"></span>吉林大学计算机科学与技术学院，2016.4.[13] Minyoung Kim Dept.
+<br><br>
+<span style="margin-left:25px"></span> of Computer Science， Rutgers University， Piscataway， NJ 08854， USA，2008.[14] Shang-Hung Lin， Ph.D.
+<br><br>
+<span style="margin-left:25px"></span> IC Media Corporation. An Introduction to Face Recognition Technology，IC Media Corporation，2000，[15] J.
+<br><br>
+<span style="margin-left:25px"></span> J. Weng Dept. of Comput. Sci.， Michigan State Univ.， East Lansing， MI， USA ，Toward automation of learning: the state self-organization problem for a face recognizer，1998.致谢
+<br><br>
+<span style="margin-left:25px"></span>光阴似箭，四年大学时光即将结束，首先我要向母校武汉理工大学致以真诚的感谢。
+<br><br>
+<span style="margin-left:25px"></span>我在这里度过了美好又充实的4年。论文的完成，离不开我的指导老师岑丽副教授的指点，从论文的选题，撰写，到完成，从系统的架构，实现，调试与测试岑老师都对我进行了精心的指导，提出了宝贵的意见，能够顺利完成毕业设计，我非常感谢岑丽老师。除此之外也要感谢身边的同学和老师对我的帮助以及鼓励，感谢他们的陪伴。经过这一学期的努力，我的论文终于成功完成。
+<br><br>
+<span style="margin-left:25px"></span>论文完成过程中，遇到问题时，岑老师都会抽空为我解答。岑老师学识渊博，治学态度严谨，工作作风优良，为人谦逊，非常值得我学习。此外，岑丽老师对我的生活也很关心，在生活上也为我提供了帮助，很平易近人。能成为岑老师的一名学生是很幸运的一件事。我也要感谢计算机科学与技术学院的领导和老师们。
+<br><br>
+<span style="margin-left:25px"></span>作为软件工程的学生，我感受到了学院的老师们上课时认真的态度和解答问题的耐心，他们传授的知识是我能顺利完成论文的基础。此外，学院丰富的教学资源能够帮助我更好的学习，接触最宝贵优秀的资源。我还要感谢四年里一起学习生活的同学们，我们一起学习，一起生活，一起玩耍，他们在各方面都给我提供了帮助，一起讨论的过程中慢慢建立起了友谊，非常感谢他们。我还要感谢我的父母，他们无私的奉献不求回报，为我提供他们能提供的最好的资源。
+<br><br>
+<span style="margin-left:25px"></span>在我心情低落的时候会鼓励我，在我遇到挫折的时候会给我温暖的拥抱，没有他们，就无法如此顺利地完成四年的学业。即将毕业步入工作，只有努力工作，踏实学习才可以不辜负亲人，在社会中创造自己的价值，才能不辜负师长和朋友们对我的期望和谆谆教诲。
+<br><br>
+<span style="margin-left:25px"></span>
+
+<br>
+<div style="margin-left:8px">
+
+<div style="text-align:center;background-color:#CA122C;margin-top:30px;overflow:hidden;">
+<a href="http://www.paperpass.com/publish/index?from=ppreport_banner" target="_blank" style="display:block;"><img height="180" src="http://file.paperpass.com/images/fabiao.jpg"></a>
+</div>
+
+</div>
+</div>
+
+
+<div class="zhengwencenter">
+<p>
+检测报告由<a href="http://www.paperpass.com/" target="_blank">PaperPass</a>文献相似度检测系统生成
+</p>
+<p>
+Copyright © 2007-2016 PaperPass
+</p>
+</div>
+<div style="margin-bottom:400px"></div>
+</body>
+</html>

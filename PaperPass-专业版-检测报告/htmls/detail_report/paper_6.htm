@@ -1,0 +1,583 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>PaperPass 最权威论文抄袭检测系统</title>
+<style type="text/css">
+<!--
+user_icon {
+color: #FFFFFF;
+}
+html
+{
+overflow-x:hidden;
+overflow-y:auto;
+}
+body,td,th {
+font-family: "微软雅黑";
+font-size: 12px;
+}
+h1,h2,h3,h4,h5,h6 {
+font-family: "宋体";
+}
+p{
+margin-bottom:10px;
+}
+demo_padding {
+line-height: 30px;
+}
+.zhengwen {
+padding-right: 15px;
+padding-left: 5px;
+padding-bottom:100px;
+font-size: 13px;
+line-height: 20px;
+color: #666666;
+}
+.zhengwencenter {
+padding-right: 15px;
+padding-left: 0px;
+margin-bottom:10px;
+font-size: 13px;
+line-height: 20px;
+color: #666666;
+text-align:center
+}
+.neikuang {
+background-color: #EBEBEB;
+border: 1px solid #999999;
+padding-right: 10px;
+padding-left: 10px;
+margin-top:10px;
+margin-left:25px;
+width:300px;
+}
+.shubu{
+height: 20px;
+width: 20px;
+margin-left:25px;
+background-color: #FFFFFF;
+border: 1px solid #999999;
+text-align: center;
+vertical-align: middle;
+display: block;
+color: #666666;
+}
+a.red:link {color:#FF0000}
+a.red:visited {color:#FF0000}
+a.red:hover {color:#000000}
+a.red:active {color:#000000}
+
+a.orange:link {color:#FF6600}
+a.orange:visited {color:#FF6600}
+a.orange:hover {color:#000000}
+a.orange:active {color:#000000}
+
+a.dark:link {color:#666666}
+a.dark:visited {color:#666666}
+a.dark:hover {color:#000000}
+a.dark:active {color:#000000}
+
+a.pagelink:hover {color:#000000}
+a.pagelink:active {color:#000000}
+
+.green{color:#008000}
+.gray{color:#666666}
+.red{color:#FF0000}
+.orange{color:#FF6600}
+a{TEXT-DECORATION:none}
+
+-->
+</style>
+</head>
+<body>
+
+
+<div class="zhengwen">
+<div>
+<span style="margin-left:25px"></span>
+[
+<a class="pagelink" href="paper_1.htm">首页</a>
+<a class="pagelink" href="paper_5.htm">上一页</a>
+<a class="pagelink" href="#">下一页</a>
+<a class="pagelink" href="paper_6.htm">尾页</a>
+页码：6/6页
+]
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">208</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>6.2 人脸识别部分</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">209</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>从主页面跳转到视频预览页面存在长时间的卡顿。</span><span class='green'>在初始化 FaceRecognizer的时候从本地读取分类器文件初始化 Haar分类器，从本地读取人脸样本并进行训练来初始化 OpenCV的 FaceRecognizer类，</span><a href='../sentence_detail/499.htm' target='right' class='orange' >这个过程很耗时，并且在主线程中完成，导致主线程阻塞，无法更新 UI。</a><span class='green'>Android中耗时任务一般不在主线程中执行，以防止主线程被阻塞无法更新UI，因此，需要把耗时任务放到子线程中执行。</span><span class='green'>首先新建一个线程，把初始化任务放到新的线程中执行，在完成初始化工作后再通过主线程创建的 Handler来告诉主线程初始化工作完成，</span><span class='green'>进行相应的 UI更新。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">210</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>图像数据位深度不一致导致程序报错。</span><span class='green'>在OpenCV中存在多种图像位深度，使用分类器时需要相同位深度的图像深度。</span><span class='green'>通常从摄像头获取到的图像位深度都是8U的，因此，在进行cvCreateImage操作时统一使用8U这个深度。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">211</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>第7章 总结与展望</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">212</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>随着移动互联网的发展和人们对新颖交互方式日趋强烈的需求，人脸识别在移动客户端上的应用愈来愈广泛。</span><a href='../sentence_detail/508.htm' target='right' class='orange' >本文利用Android开发技术与OpenCV图形图像库完成了在Android设备上的人脸识别功能。</a><span class='green'>现在对本文的工作进行一个总结：</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">213</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>本文首先对人脸识别的现状，发展历程以及生活场景中的应用进行了概括，然后总结对需要实现的系统进行了分析。</span><span class='green'>随后决定在Android客户端实现系统。</span><a href='../sentence_detail/512.htm' target='right' class='orange' >使用Haar分类器算法实现人脸检测部分，使用LBP算法实现人脸识别部分。</a><span class='green'>并且使用JavaCV库来实现这两个算法。</span><a href='../sentence_detail/514.htm' target='right' class='orange' >最后对人脸识别系统具体的开发流程进行了介绍。</a>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">214</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>由于时间和精力的以及研究深度上的限制，无法对算法进行深层次的探索，只是理解了算法的基本原理和库实现的方法。</span><span class='green'>在实现Android人脸识别系统后还有很大的改进空间：</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">215</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>1.没有使用运动跟踪算法。</span><span class='green'>系统对视频流中的每一帧进行人脸识别，从而实现了在视频中实时的人脸识别，但是这样效率较低，使用运动跟踪算法可以提高系统的效率。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">216</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>2.人脸样本的获取方法局限于使用摄像头获取，样本数量较少，应当可以通过其他方式导入人脸样本，从而提高系统的易用性和识别成功率。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">217</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><a href='../sentence_detail/520.htm' target='right' class='orange' >3.人脸识别成功率较低，直接使用 OpenCV中的人脸识别算法人脸识别识别错误率较高，</a><a href='../sentence_detail/521.htm' target='right' class='orange' >对获取到的人脸图片进行预处理，以提高识别成功率。</a>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">218</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>4.可以对人脸样本库的人脸图片进行预览，从而方便用户进行比对，提高用户体验。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">219</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>总而言之，人脸识别在Android端的应用会越来越多，为了提升用户体验，需要研究如何提高人脸识别的速度与成功率，以及如何简便的获取人脸样本。</span><span class='green'>只有沉下心来对算法进行深入的研究和实践，才能提高算法的效率。</span><span class='green'>这些都是我今后要去完成的。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">220</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>参考文献</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">221</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>[1]严严， 章毓晋，基于视频的人脸研究进展，北京：</span><span class='green'>清华大学信息科学与技术国家实验室，2009.5.</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">222</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>[2]王智飞，苗振江，低分辨率人脸识别算法研究，北京：</span><span class='green'>北京交通大学，2013.</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">223</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>[3]杨利平，辜小花，重庆：</span><span class='green'>重庆大学光电技术及系统教育部重点实验室，重庆：</span><span class='green'>重庆科技学院，2014.</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">224</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>[4]吴巾一，周德龙，人脸识别方法综述，浙江：</span><span class='green'>浙江工业大学计算机科学与技术学院，2009.9.</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">225</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>[5]王华君，李荣，徐燕华，孟德建，基于局部相位纹理表示的光照变化人脸识别算法，无锡：</span><span class='green'>无锡太湖学院工学院，2015.</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">226</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>[6]范哲意，曾亚军，蒋姣，翁澍沁，刘志文，视频人脸识别实验平台的设计与实现，北京：</span><span class='green'>北京理工大学信息与电子学院，2016.</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">227</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>[7]杨恢先，翟云龙，蔡勇勇，奉俊鹏，李球球，纹理与边缘相结合的单样本人脸识别，湘潭：</span><span class='green'>湘潭大学，2014.10.</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">228</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>[8]张俊，李鑫，赵莎莎，邓硕辰，基于嵌入式平台和OpenCV的人脸识吧系统设计，太原：</span><span class='green'>太原理工大学信息工程学院，2016.4.</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">229</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>[9]袁华，钟欢虹，欧阳宁，莫建文，基于分块LBP和鲁棒核编码的人脸识别，桂林：</span><span class='green'>桂林科技大学信息与通信学院，2016.2.</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">230</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>[10]张三友，王磊，基于Android的人脸识别系统设计与实现，苏州：</span><span class='green'>苏州市吴江区公安局科技信息化大队；</span><span class='green'>公安部第三研究所物联网中心，2016.4</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">231</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>[11]耿冬冬，胡友彬，万友，欧静华，基于视频流的人脸检测与跟踪关键技术研究，解放军理工大学气象海洋学院，2016.3.</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">232</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>[12]盖健，刘小华，李锐杰，宁尚军，基于LBP的图像集人脸识别算法，吉林：</span><span class='green'>吉林大学计算机科学与技术学院，2016.4.</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">233</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>[13] Minyoung Kim Dept.</span><span class='green'>of Computer Science， Rutgers University， Piscataway， NJ 08854， USA，2008.</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">234</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>[14] Shang-Hung Lin， Ph.D.</span><span class='green'>IC Media Corporation.</span><span class='green'>An Introduction to Face Recognition Technology，IC Media Corporation，2000，</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">235</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>[15] J.</span><span class='green'>J.</span><span class='green'>Weng Dept.</span><span class='green'>of Comput.</span><span class='green'>Sci.， Michigan State Univ.， East Lansing， MI， USA ，Toward automation of learning:</span><span class='green'>the state self-organization problem for a face recognizer，1998.</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">236</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>致谢</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">237</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><a href='../sentence_detail/564.htm' target='right' class='orange' >光阴似箭，四年大学时光即将结束，首先我要向母校武汉理工大学致以真诚的感谢。</a><span class='green'>我在这里度过了美好又充实的4年。</span><a href='../sentence_detail/566.htm' target='right' class='orange' >论文的完成，离不开我的指导老师岑丽副教授的指点，从论文的选题，撰写，</a><span class='green'>到完成，从系统的架构，实现，调试与测试岑老师都对我进行了精心的指导，</span><a href='../sentence_detail/568.htm' target='right' class='orange' >提出了宝贵的意见，能够顺利完成毕业设计，我非常感谢岑丽老师。</a><span class='green'>除此之外也要感谢身边的同学和老师对我的帮助以及鼓励，感谢他们的陪伴。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">238</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>经过这一学期的努力，我的论文终于成功完成。</span><span class='green'>论文完成过程中，遇到问题时，岑老师都会抽空为我解答。</span><a href='../sentence_detail/572.htm' target='right' class='orange' >岑老师学识渊博，治学态度严谨，工作作风优良，为人谦逊，非常值得我学习。</a><span class='green'>此外，岑丽老师对我的生活也很关心，在生活上也为我提供了帮助，很平易近人。</span><a href='../sentence_detail/574.htm' target='right' class='orange' >能成为岑老师的一名学生是很幸运的一件事。</a>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">239</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><a href='../sentence_detail/575.htm' target='right' class='orange' >我也要感谢计算机科学与技术学院的领导和老师们。</a><span class='green'>作为软件工程的学生，我感受到了学院的老师们上课时认真的态度和解答问题的耐心，他们传授的知识是我能顺利完成论文的基础。</span><span class='green'>此外，学院丰富的教学资源能够帮助我更好的学习，接触最宝贵优秀的资源。</span><span class='green'>我还要感谢四年里一起学习生活的同学们，我们一起学习，一起生活，一起玩耍，他们在各方面都给我提供了帮助，一起讨论的过程中慢慢建立起了友谊，非常感谢他们。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">240</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><a href='../sentence_detail/579.htm' target='right' class='orange' >我还要感谢我的父母，他们无私的奉献不求回报，为我提供他们能提供的最好的资源。</a><span class='green'>在我心情低落的时候会鼓励我，在我遇到挫折的时候会给我温暖的拥抱，没有他们，就无法如此顺利地完成四年的学业。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">241</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>即将毕业步入工作，只有努力工作，踏实学习才可以不辜负亲人，在社会中创造自己的价值，才能不辜负师长和朋友们对我的期望和谆谆教诲。</span>
+</p>
+</div>
+
+
+<div>
+<span style="margin-left:25px"></span>
+[
+<a class="pagelink" href="paper_1.htm">首页</a>
+<a class="pagelink" href="paper_5.htm">上一页</a>
+<a class="pagelink" href="#">下一页</a>
+<a class="pagelink" href="paper_6.htm">尾页</a>
+页码：6/6页
+]
+</div>
+
+<br>
+<div style="margin-left:8px">
+
+<div style="text-align:center;background-color:#CA122C;margin-top:30px;overflow:hidden;">
+<a href="http://www.paperpass.com/publish/index?from=ppreport_banner" target="_blank" style="display:block;"><img height="180" src="http://file.paperpass.com/images/fabiao.jpg"></a>
+</div>
+
+</div>
+</div>
+
+
+<div class="zhengwencenter">
+<p>
+检测报告由<a href="http://www.paperpass.com/" target="_blank">PaperPass</a>文献相似度检测系统生成
+</p>
+<p>
+Copyright © 2007-2016 PaperPass
+</p>
+</div>
+<div style="margin-bottom:400px"></div>
+</body>
+</html>

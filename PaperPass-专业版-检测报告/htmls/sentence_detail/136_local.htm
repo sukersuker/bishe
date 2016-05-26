@@ -1,0 +1,503 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>PaperPass 最权威论文抄袭检测系统</title>
+<style type="text/css">
+<!--
+user_icon {
+color: #FFFFFF;
+}
+body,td,th {
+font-family: "微软雅黑";
+font-size: 13px;
+}
+h1,h2,h3,h4,h5,h6 {
+font-family: "宋体";
+}
+demo_padding {
+line-height: 30px;
+}
+html
+{
+overflow-x:hidden;
+overflow-y:scroll;
+}
+.liebiao {
+border-bottom-width: 1px;
+border-bottom-style: dashed;
+border-bottom-color: #CCCCCC;
+height: 0px;
+margin-top:10px;
+margin-bottom:10px;
+float: left;
+width: 90%;
+}
+.liebiao ul {
+list-style-type: none;
+display: block;
+margin: 0px;
+clear: none;
+}
+.zhengwen {
+padding-right: 15px;
+padding-left: 0px;
+margin-bottom:10px;
+font-size: 13px;
+line-height: 20px;
+color: #666666;
+}
+.zhengwencenter {
+padding-right: 15px;
+padding-left: 0px;
+margin-bottom:10px;
+font-size: 13px;
+line-height: 20px;
+color: #666666;
+text-align:center
+}
+.neikuang {
+background-color: #EBEBEB;
+border: 1px dashed #999999;
+padding-right: 10px;
+padding-left: 10px;
+}
+.shubu{
+float: left;
+height: 15px;
+width: 15px;
+background-color: #FFFFFF;
+border: 1px solid #999999;
+text-align: center;
+vertical-align: middle;
+display: block;
+font-size: 13px;
+}
+.kuang {
+border: 1px solid #999999;
+}
+.red{color:#FF0000}
+.orange{color:#FF6600}
+.green{color:#008000}
+
+a:hover {color:#000000}
+a:active {color:#000000}
+
+a{TEXT-DECORATION:none}
+
+-->
+</style>
+</head>
+<body>
+<div class="zhengwen"><a href="136.htm">综合</a>&nbsp;&nbsp;|&nbsp;&nbsp;本地库&nbsp;&nbsp;|&nbsp;&nbsp;<a href="136_net.htm">互联网</a><br /></div>
+<div class="zhengwen">
+语句：<span class='orange' >首先将人脸肤色像素按照严格的几何关系去拆分，再将其按照一定规则合并到一起，在合并过程中使用一些其他特征进行验证。</span><br><br>
+<div style="display:none;">该句相似度：<span class='orange' >45</span>%<a href='#xiugaijianyi' style='padding-left:30px;'>查看该句修改建议</a><b>（ChaoXidudutishiTorpalces87sbqwopahasw4）</b><br><br></div>
+在本地库共找出相似内容：10个
+</div>
+
+<table width="100%" cellspacing="3" style="margin-bottom:15px;border: 1px solid #C0C0C0" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" cellpadding="3">
+<tr>
+<td align="right" width="100%">
+<div class="shubu">1</div>
+<font color="#666666">相似度：</font><span class='orange' >45</a><font color="#666">%</font>
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">您的句子（灰色背景是与相似句子重合的部分）：</font><br>
+<span class='orange' >首先将人脸<span style="background:#cbcbcb">肤色</span><span style="background:#cbcbcb">像素</span><span style="background:#cbcbcb">按照</span><span style="background:#cbcbcb">严格</span><span style="background:#cbcbcb">的</span><span style="background:#cbcbcb">几何</span>关系去拆分，再将其<span style="background:#cbcbcb">按照</span><span style="background:#cbcbcb">一定</span><span style="background:#cbcbcb">规则</span>合并到一起，在合并<span style="background:#cbcbcb">过程</span><span style="background:#cbcbcb">中</span>使用一些其他<span style="background:#cbcbcb">特征</span><span style="background:#cbcbcb">进行</span><span style="background:#cbcbcb">验证</span>。</span><br>
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">相似句子：</font><br>
+<span class="green"><span style="background:#cbcbcb">肤色</span><span style="background:#cbcbcb">像素</span><span style="background:#cbcbcb">按照</span>较为<span style="background:#cbcbcb">严格</span><span style="background:#cbcbcb">的</span>颜色一致性和<span style="background:#cbcbcb">几何</span>约束条件聚类为区域，然后<span style="background:#cbcbcb">按照</span><span style="background:#cbcbcb">一定</span><span style="background:#cbcbcb">规则</span><span style="background:#cbcbcb">进行</span>归并，归并<span style="background:#cbcbcb">过程</span><span style="background:#cbcbcb">中</span>利用其它<span style="background:#cbcbcb">特征</span><span style="background:#cbcbcb">进行</span><span style="background:#cbcbcb">验证</span>。</span>
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">相似句子原文片段：</font><br>
+……对于较为复杂的情况，需要考虑两方面的问题：(1)由于光照和脸部器官的影响，人脸可能被分裂为若干互不连通的肤色区域；(2)人脸区域可能与其它类肤色区域连接在一起。聚类一归并一验证策略是较常用的解决方法：首先将<span class='green'>肤色像素按照较为严格的颜色一致性和几何约束条件聚类为区域，然后按照一定规则进行归并，归并过程中利用其它特征进行验证。</span>Rein_LienHue等【55】使用一种光线补偿技术对输入图像的R、G、B值进行校正，将校正后的R、G、B值变换……
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">来源(学位论文)：</font><br>
+<b>篇名：</b>《基于分类器融合的人脸检测算法研究》<br><b>作者：</b>毕萍<br><b>分类号：</b>TP391.41<br><b>学科专业：</b>电路与系统<br><b>授予学位：</b>硕士<br><b>导师姓名：</b>梁继民<br><b>学位授予单位：</b>西安电子科技大学<br><b>学位年度：</b>2006<br><b>关键词：</b>人脸检测 层叠式算法 肤色验证 分类器融合 人脸图像
+</td>
+</tr>
+</table>
+
+
+<table width="100%" cellspacing="3" style="margin-bottom:15px;border: 1px solid #C0C0C0" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" cellpadding="3">
+<tr>
+<td align="right" width="100%">
+<div class="shubu">2</div>
+<font color="#666666">相似度：</font><span class='orange' >45</a><font color="#666">%</font>
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">您的句子（灰色背景是与相似句子重合的部分）：</font><br>
+<span class='orange' >首先将人脸肤色像素<span style="background:#cbcbcb">按照</span><span style="background:#cbcbcb">严格</span><span style="background:#cbcbcb">的</span><span style="background:#cbcbcb">几何</span>关系去拆分，再将其<span style="background:#cbcbcb">按照</span><span style="background:#cbcbcb">一定</span><span style="background:#cbcbcb">规则</span>合并到一起，在合并<span style="background:#cbcbcb">过程</span><span style="background:#cbcbcb">中</span>使用一些其他<span style="background:#cbcbcb">特征</span><span style="background:#cbcbcb">进行</span><span style="background:#cbcbcb">验证</span>。</span><br>
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">相似句子：</font><br>
+<span class="green">较为<span style="background:#cbcbcb">严格</span><span style="background:#cbcbcb">的</span>颜色一致性和<span style="background:#cbcbcb">几何</span>约束条件聚类为区域，然后<span style="background:#cbcbcb">按照</span><span style="background:#cbcbcb">一定</span><span style="background:#cbcbcb">规则</span><span style="background:#cbcbcb">进行</span>归并，归并后或归并<span style="background:#cbcbcb">过程</span><span style="background:#cbcbcb">中</span>利用其它<span style="background:#cbcbcb">特征</span><span style="background:#cbcbcb">进行</span><span style="background:#cbcbcb">验证</span>。</span>
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">相似句子原文片段：</font><br>
+……的情况，则需要考虑两方面的问题：(1)由于光照和脸部器官的影响，人脸可能被割裂为若干互不连通的肤色区域，(2)人脸区域可能与其它类肤色区域连接在一起。聚类一归并一验证策略是较常用的解决方法：首先将肤色像素按照<span class='green'>较为严格的颜色一致性和几何约束条件聚类为区域，然后按照一定规则进行归并，归并后或归并过程中利用其它特征进行验证。</span>Garcia等人按照色度的差异将肤色进一步量化为不同的类型，将类型相同且相邻的肤色像素聚类为区域，根据几何位置、形状和色调……
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">来源(学位论文)：</font><br>
+<b>篇名：</b>《基于小波变换和支持向量机的人脸识别方法研究》<br><b>作者：</b>马跃平<br><b>分类号：</b>O174<br><b>学科专业：</b>通信与信息系统<br><b>授予学位：</b>硕士<br><b>导师姓名：</b>黄贤武<br><b>学位授予单位：</b>苏州大学<br><b>学位年度：</b>2005<br><b>关键词：</b>人脸识别 人脸检测 小波变换 支持向量机 核函数 小样本问题
+</td>
+</tr>
+</table>
+
+
+<table width="100%" cellspacing="3" style="margin-bottom:15px;border: 1px solid #C0C0C0" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" cellpadding="3">
+<tr>
+<td align="right" width="100%">
+<div class="shubu">3</div>
+<font color="#666666">相似度：</font><span class='orange' >44</a><font color="#666">%</font>
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">您的句子（灰色背景是与相似句子重合的部分）：</font><br>
+<span class='orange' >首先将人脸肤色像素<span style="background:#cbcbcb">按照</span><span style="background:#cbcbcb">严格</span><span style="background:#cbcbcb">的</span><span style="background:#cbcbcb">几何</span>关系去拆分，再将其<span style="background:#cbcbcb">按照</span><span style="background:#cbcbcb">一定</span><span style="background:#cbcbcb">规则</span>合并到一起，在合并<span style="background:#cbcbcb">过程</span><span style="background:#cbcbcb">中</span>使用一些其他<span style="background:#cbcbcb">特征</span><span style="background:#cbcbcb">进行</span><span style="background:#cbcbcb">验证</span>。</span><br>
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">相似句子：</font><br>
+<span class="green"><span style="background:#cbcbcb">按照</span>较为<span style="background:#cbcbcb">严格</span><span style="background:#cbcbcb">的</span>颜色一致性和<span style="background:#cbcbcb">几何</span>约束条件聚类为区域，然后<span style="background:#cbcbcb">按照</span><span style="background:#cbcbcb">一定</span><span style="background:#cbcbcb">规则</span><span style="background:#cbcbcb">进行</span>归并，归并后或归并<span style="background:#cbcbcb">过程</span><span style="background:#cbcbcb">中</span>利用其它<span style="background:#cbcbcb">特征</span><span style="background:#cbcbcb">进行</span><span style="background:#cbcbcb">验证</span>。</span>
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">相似句子原文片段：</font><br>
+……的情况，则需要考虑两方面的问题；(1)由于光照和脸部器官的影响，人脸可能被割裂为若干互不连通的肤色区域；(2)人脸区域可能与其它类肤色区域连接在一起。聚类一归并一验证策略是较常用的解决方法：首先将肤色像素<span class='green'>按照较为严格的颜色一致性和几何约束条件聚类为区域，然后按照一定规则进行归并，归并后或归并过程中利用其它特征进行验证。</span>Garcia等闲按照色度的差异将肤色进一步量化为不同的类型，将类型相同且相邻的肤色像素聚类为区域，根据几何位置、形状和……
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">来源(学位论文)：</font><br>
+<b>篇名：</b>《基于边界特征的人脸识别》<br><b>作者：</b>黄柏林<br><b>分类号：</b>TP391.41<br><b>学科专业：</b>计算机应用技术<br><b>授予学位：</b>硕士<br><b>导师姓名：</b>葛元<br><b>学位授予单位：</b>上海海事大学<br><b>学位年度：</b>2002<br><b>关键词：</b>边缘检测 主元分析法 人脸识别 模式识别 图像处理 灰度投影曲线
+</td>
+</tr>
+</table>
+
+
+<table width="100%" cellspacing="3" style="margin-bottom:15px;border: 1px solid #C0C0C0" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" cellpadding="3">
+<tr>
+<td align="right" width="100%">
+<div class="shubu">4</div>
+<font color="#666666">相似度：</font><span class='orange' >44</a><font color="#666">%</font>
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">您的句子（灰色背景是与相似句子重合的部分）：</font><br>
+<span class='orange' >首先将人脸肤色像素<span style="background:#cbcbcb">按照</span><span style="background:#cbcbcb">严格</span><span style="background:#cbcbcb">的</span><span style="background:#cbcbcb">几何</span>关系去拆分，再将其<span style="background:#cbcbcb">按照</span><span style="background:#cbcbcb">一定</span><span style="background:#cbcbcb">规则</span>合并到一起，在合并<span style="background:#cbcbcb">过程</span><span style="background:#cbcbcb">中</span>使用一些其他<span style="background:#cbcbcb">特征</span><span style="background:#cbcbcb">进行</span><span style="background:#cbcbcb">验证</span>。</span><br>
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">相似句子：</font><br>
+<span class="green"><span style="background:#cbcbcb">按照</span>较为<span style="background:#cbcbcb">严格</span><span style="background:#cbcbcb">的</span>颜色一致性和<span style="background:#cbcbcb">几何</span>约束条件聚类为区域，然后<span style="background:#cbcbcb">按照</span><span style="background:#cbcbcb">一定</span><span style="background:#cbcbcb">规则</span><span style="background:#cbcbcb">进行</span>归并，归并后或归并<span style="background:#cbcbcb">过程</span><span style="background:#cbcbcb">中</span>利用其它<span style="background:#cbcbcb">特征</span><span style="background:#cbcbcb">进行</span><span style="background:#cbcbcb">验证</span>。</span>
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">相似句子原文片段：</font><br>
+……复杂的情况，则需要考虑两方面的问题：(1)由于光照和脸部器官的影响，人脸可能被割裂为若干互不连通的肤色区域，f2)人脸区域可能与其它类肤色区域连接在一起。聚类一归并一验证策略是较常用的解决方法：首先将肤色像素<span class='green'>按照较为严格的颜色一致性和几何约束条件聚类为区域，然后按照一定规则进行归并，归并后或归并过程中利用其它特征进行验证。</span>Garcia等人按照色度的差异将肤色进一步量化为不同的类型，将类型相同且相邻的肤色像素聚类为区域，根据几何位置、形状和……
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">来源(学位论文)：</font><br>
+<b>篇名：</b>《基于模板匹配、马赛克图以及支持向量机的人脸检测》<br><b>作者：</b>袁小勇<br><b>分类号：</b>TP391.4<br><b>学科专业：</b>通信与信息系统<br><b>授予学位：</b>硕士<br><b>导师姓名：</b>黄贤武<br><b>学位授予单位：</b>苏州大学<br><b>学位年度：</b>2003<br><b>关键词：</b>人脸检测 形态学变换 模板匹配 马赛克图 支持向量机
+</td>
+</tr>
+</table>
+
+
+<table width="100%" cellspacing="3" style="margin-bottom:15px;border: 1px solid #C0C0C0" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" cellpadding="3">
+<tr>
+<td align="right" width="100%">
+<div class="shubu">5</div>
+<font color="#666666">相似度：</font><span class='orange' >43</a><font color="#666">%</font>
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">您的句子（灰色背景是与相似句子重合的部分）：</font><br>
+<span class='orange' >首先将人脸肤色像素<span style="background:#cbcbcb">按照</span><span style="background:#cbcbcb">严格</span><span style="background:#cbcbcb">的</span><span style="background:#cbcbcb">几何</span>关系去拆分，再将其<span style="background:#cbcbcb">按照</span><span style="background:#cbcbcb">一定</span><span style="background:#cbcbcb">规则</span>合并到一起，在合并<span style="background:#cbcbcb">过程</span><span style="background:#cbcbcb">中</span>使用一些其他<span style="background:#cbcbcb">特征</span><span style="background:#cbcbcb">进行</span><span style="background:#cbcbcb">验证</span>。</span><br>
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">相似句子：</font><br>
+<span class="green">较为<span style="background:#cbcbcb">严格</span><span style="background:#cbcbcb">的</span>颜色一致性和<span style="background:#cbcbcb">几何</span>约束条件聚类为区域，然后<span style="background:#cbcbcb">按照</span><span style="background:#cbcbcb">一定</span><span style="background:#cbcbcb">规则</span><span style="background:#cbcbcb">进行</span>归并，归并后或归并<span style="background:#cbcbcb">过程</span><span style="background:#cbcbcb">中</span>利用其它<span style="background:#cbcbcb">特征</span><span style="background:#cbcbcb">进行</span><span style="background:#cbcbcb">验证</span>。</span>
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">相似句子原文片段：</font><br>
+……较为复杂的情况，则需要考虑两方面的问题：1)由于光照和脸部器官的影响，人脸可能被割裂为若干互不连通的肤色区域：2)人脸区域可能与其它类肤色区域连接在一起。聚类一归并一验证策略是较常用的解决方法：首先将肤色象素按照<span class='green'>较为严格的颜色一致性和几何约束条件聚类为区域，然后按照一定规则进行归并，归并后或归并过程中利用其它特征进行验证。</span>Yangrl等跟据色度的一致性和空间距离将肤色像素聚类成区域，然后逐步归并直到得到符合一定先验知识的椭圆区域为止，最后检查区域……
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">来源(学术期刊)：</font><br>
+<b>篇名：</b>《人脸检测技术的研究进展》<br><b>作者：</b>王超 李东 雷震<br><b>作者单位：</b>装甲兵工程学院,信息工程系,北京,100072<br><b>页码：</b>P7211—P7213<br><b>页数：</b>3页<br><b>分类号：</b>TP18<br><b>机标分类号：</b>TP3 TN<br><b>期刊名称：</b>《电脑知识与技术》<br><b>出版时间：</b>2009年25期<br><b>ISSN：</b>1009-3044<br><b>关键词：</b>人脸检测 统计理论 不变特征 模板匹配<br><b>摘要：</b>近年来由于人脸检测技术在身份验证、视频监控等领域日益广泛的应用,对于人脸检测的研究越来越受到人们的重视.该文对各发展阶段的方法进行介绍比较,指出其优劣性.
+</td>
+</tr>
+</table>
+
+
+<table width="100%" cellspacing="3" style="margin-bottom:15px;border: 1px solid #C0C0C0" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" cellpadding="3">
+<tr>
+<td align="right" width="100%">
+<div class="shubu">6</div>
+<font color="#666666">相似度：</font><span class='orange' >43</a><font color="#666">%</font>
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">您的句子（灰色背景是与相似句子重合的部分）：</font><br>
+<span class='orange' >首先将人脸肤色像素<span style="background:#cbcbcb">按照</span>严格<span style="background:#cbcbcb">的</span><span style="background:#cbcbcb">几何</span>关系去拆分，再将其<span style="background:#cbcbcb">按照</span><span style="background:#cbcbcb">一定</span><span style="background:#cbcbcb">规则</span>合并到一起，在合并<span style="background:#cbcbcb">过程</span><span style="background:#cbcbcb">中</span>使用一些其他<span style="background:#cbcbcb">特征</span><span style="background:#cbcbcb">进行</span><span style="background:#cbcbcb">验证</span>。</span><br>
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">相似句子：</font><br>
+<span class="green">技术<span style="background:#cbcbcb">的</span>研究色一致性和<span style="background:#cbcbcb">几何</span>约束条件聚类为区域，然后<span style="background:#cbcbcb">按照</span><span style="background:#cbcbcb">一定</span><span style="background:#cbcbcb">规则</span><span style="background:#cbcbcb">进行</span>归并，归并后或归并<span style="background:#cbcbcb">过程</span><span style="background:#cbcbcb">中</span>利用其它<span style="background:#cbcbcb">特征</span><span style="background:#cbcbcb">进行</span><span style="background:#cbcbcb">验证</span>。</span>
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">相似句子原文片段：</font><br>
+……响，人脸可能被割裂为若干互不连通的肤色区域：(2)人脸区域可能与其它类肤色区域连接在一起。聚类一归并一验证策略是较常用的解决方法：首先将肤色像素按照较为严格的颜第8页堕京墼大学硕士学位论文视频中人脸检测及跟踪<span class='green'>技术的研究色一致性和几何约束条件聚类为区域，然后按照一定规则进行归并，归并后或归并过程中利用其它特征进行验证。</span>Gs_rcia等瞄“按照色度的差异将肤色进一步鼍化为不同的类型，将类型相同且相邻的肤色像素聚类为区域，根据几何位置……
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">来源(学位论文)：</font><br>
+<b>篇名：</b>《视频中人脸检测及跟踪技术的研究》<br><b>作者：</b>季剑岚<br><b>分类号：</b>TP301.6<br><b>学科专业：</b>系统工程<br><b>授予学位：</b>硕士<br><b>导师姓名：</b>王建宇<br><b>学位授予单位：</b>南京理工大学<br><b>学位年度：</b>2005<br><b>关键词：</b>人脸检测 肤色模型 差分图像 视频监控
+</td>
+</tr>
+</table>
+
+
+<table width="100%" cellspacing="3" style="margin-bottom:15px;border: 1px solid #C0C0C0" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" cellpadding="3">
+<tr>
+<td align="right" width="100%">
+<div class="shubu">7</div>
+<font color="#666666">相似度：</font><span class='orange' >42</a><font color="#666">%</font>
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">您的句子（灰色背景是与相似句子重合的部分）：</font><br>
+<span class='orange' >首先将人脸肤色像素<span style="background:#cbcbcb">按照</span><span style="background:#cbcbcb">严格</span><span style="background:#cbcbcb">的</span><span style="background:#cbcbcb">几何</span>关系去拆分，再将其<span style="background:#cbcbcb">按照</span><span style="background:#cbcbcb">一定</span><span style="background:#cbcbcb">规则</span>合并到一起，在合并<span style="background:#cbcbcb">过程</span><span style="background:#cbcbcb">中</span>使用一些其他<span style="background:#cbcbcb">特征</span><span style="background:#cbcbcb">进行</span><span style="background:#cbcbcb">验证</span>。</span><br>
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">相似句子：</font><br>
+<span class="green">较为<span style="background:#cbcbcb">严格</span><span style="background:#cbcbcb">的</span>颜色一致性和<span style="background:#cbcbcb">几何</span>约束条件聚类为区域，然后<span style="background:#cbcbcb">按照</span><span style="background:#cbcbcb">一定</span><span style="background:#cbcbcb">规则</span><span style="background:#cbcbcb">进行</span>归并，归并后或归并<span style="background:#cbcbcb">过程</span><span style="background:#cbcbcb">中</span>利用其它<span style="background:#cbcbcb">特征</span><span style="background:#cbcbcb">进行</span><span style="background:#cbcbcb">验证</span>。</span>
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">相似句子原文片段：</font><br>
+……的情况，则需要考虑两方面的问题：(1)由于光照和脸部器官的影响，人脸可能被割裂为若干互不连通的肤色区域：(2)人脸区域可能与其它类肤色区域连接在一起。聚类一归并～验证策略是较常用的解决方法：首先将肤色象素按照<span class='green'>较为严格的颜色一致性和几何约束条件聚类为区域，然后按照一定规则进行归并，归并后或归并过程中利用其它特征进行验证。</span>Yan913]等跟据色度的一致性和空间距离将肤色像素聚类成区域，然后逐步归并直到得到符合一定先验知识的椭圆区域为止，……
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">来源(会议论文)：</font><br>
+<b>篇名：</b>《基于肤色分割的人脸检测系统实现》<br><b>作者：</b>王超 李东 雷震<br><b>作者单位：</b>装甲兵工程学院信息工程系,北京,100072<br><b>会议名称：</b>江苏省系统工程学会第十一届学术年会<br><b>主办单位：</b>江苏省系统工程学会<br><b>会议时间：</b>2009-10-01<br><b>会议地点：</b>镇江<br><b>关键词：</b>图像识别 人脸检测 肤色分割 光照补偿
+</td>
+</tr>
+</table>
+
+
+<table width="100%" cellspacing="3" style="margin-bottom:15px;border: 1px solid #C0C0C0" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" cellpadding="3">
+<tr>
+<td align="right" width="100%">
+<div class="shubu">8</div>
+<font color="#666666">相似度：</font><span class='orange' >42</a><font color="#666">%</font>
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">您的句子（灰色背景是与相似句子重合的部分）：</font><br>
+<span class='orange' >首先将人脸肤色像素<span style="background:#cbcbcb">按照</span><span style="background:#cbcbcb">严格</span><span style="background:#cbcbcb">的</span><span style="background:#cbcbcb">几何</span>关系去拆分，再将其<span style="background:#cbcbcb">按照</span><span style="background:#cbcbcb">一定</span><span style="background:#cbcbcb">规则</span>合并到一起，在合并<span style="background:#cbcbcb">过程</span><span style="background:#cbcbcb">中</span>使用一些<span style="background:#cbcbcb">其他</span><span style="background:#cbcbcb">特征</span><span style="background:#cbcbcb">进行</span><span style="background:#cbcbcb">验证</span>。</span><br>
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">相似句子：</font><br>
+<span class="green"><span style="background:#cbcbcb">严格</span><span style="background:#cbcbcb">的</span>颜色一致性和<span style="background:#cbcbcb">几何</span>约束条件聚类为区域，然后<span style="background:#cbcbcb">按照</span><span style="background:#cbcbcb">一定</span><span style="background:#cbcbcb">规则</span><span style="background:#cbcbcb">进行</span>归并，归并后或归并<span style="background:#cbcbcb">过程</span><span style="background:#cbcbcb">中</span>利用<span style="background:#cbcbcb">其他</span><span style="background:#cbcbcb">特征</span><span style="background:#cbcbcb">进行</span><span style="background:#cbcbcb">验证</span>。Garcia等</span>
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">相似句子原文片段：</font><br>
+……情况，则需要考虑两方面的问题：(1)由于光照和脸部器官的影响，人脸可能被割裂为若干互不连通的肤色区域；(2)人脸区域可能与其他类肤色区域连接在一起。聚类一归并～验证策略是较常用的解决方法：首先将肤色像素按照较为<span class='green'>严格的颜色一致性和几何约束条件聚类为区域，然后按照一定规则进行归并，归并后或归并过程中利用其他特征进行验证。Garcia等</span>【Iol按照色度的差异进一步将肤色量化为不同的类型，将类型相同且相邻的肤色像素聚类为区域，根据几何位置、形状和色调……
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">来源(学位论文)：</font><br>
+<b>篇名：</b>《人脸识别技术的研究与应用》<br><b>作者：</b>阮揆<br><b>分类号：</b>TP391.41<br><b>学科专业：</b>电路与系统<br><b>授予学位：</b>硕士<br><b>导师姓名：</b>孙即祥<br><b>学位授予单位：</b>国防科学技术大学<br><b>学位年度：</b>2006<br><b>关键词：</b>人脸识别 haar特征 独立成分分析 最小最大概率机 特征提取 模式识别
+</td>
+</tr>
+</table>
+
+
+<table width="100%" cellspacing="3" style="margin-bottom:15px;border: 1px solid #C0C0C0" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" cellpadding="3">
+<tr>
+<td align="right" width="100%">
+<div class="shubu">9</div>
+<font color="#666666">相似度：</font><span class='orange' >41</a><font color="#666">%</font>
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">您的句子（灰色背景是与相似句子重合的部分）：</font><br>
+<span class='orange' >首先将人脸肤色像素<span style="background:#cbcbcb">按照</span><span style="background:#cbcbcb">严格</span><span style="background:#cbcbcb">的</span><span style="background:#cbcbcb">几何</span>关系去拆分，再将其<span style="background:#cbcbcb">按照</span><span style="background:#cbcbcb">一定</span><span style="background:#cbcbcb">规则</span>合并到一起，在合并<span style="background:#cbcbcb">过程</span><span style="background:#cbcbcb">中</span>使用一些其他<span style="background:#cbcbcb">特征</span><span style="background:#cbcbcb">进行</span><span style="background:#cbcbcb">验证</span>。</span><br>
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">相似句子：</font><br>
+<span class="green"><span style="background:#cbcbcb">按照</span>较为<span style="background:#cbcbcb">严格</span><span style="background:#cbcbcb">的</span>颜色一致性和<span style="background:#cbcbcb">几何</span>约束条件聚类为区域，然后<span style="background:#cbcbcb">按照</span><span style="background:#cbcbcb">一定</span><span style="background:#cbcbcb">规则</span><span style="background:#cbcbcb">进行</span>归并，归并后或归并<span style="background:#cbcbcb">过程</span><span style="background:#cbcbcb">中</span>利用其它<span style="background:#cbcbcb">特征</span><span style="background:#cbcbcb">进行</span><span style="background:#cbcbcb">验证</span>。</span>
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">相似句子原文片段：</font><br>
+……的情况，则需要考虑两方面的问题：(1)由于光照和脸部器官的影响，人脸可能被割裂为若干互不连通的肤色区域：(2)人脸区域可能与其它类肤色区域连接在一起。聚类一归并一验证策略是较常用的解决方法：首先将肤色象素<span class='green'>按照较为严格的颜色一致性和几何约束条件聚类为区域，然后按照一定规则进行归并，归并后或归并过程中利用其它特征进行验证。</span>Yangf7】等跟据色度的一致性和空间距离将肤色像素聚类成区域，然后逐步归并直到得到符合一定先验知识的椭圆区域为止，……
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">来源(会议论文)：</font><br>
+<b>篇名：</b>《人脸检测技术的研究进展》<br><b>作者：</b>王超 李东 雷震<br><b>作者单位：</b>装甲兵工程学院信息工程系,北京,100072<br><b>会议名称：</b>江苏省系统工程学会第十一届学术年会<br><b>主办单位：</b>江苏省系统工程学会<br><b>会议时间：</b>2009-10-01<br><b>会议地点：</b>镇江<br><b>关键词：</b>视频监控 人脸检测 图像识别 图像匹配
+</td>
+</tr>
+</table>
+
+
+<table width="100%" cellspacing="3" style="margin-bottom:15px;border: 1px solid #C0C0C0" bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF" cellpadding="3">
+<tr>
+<td align="right" width="100%">
+<div class="shubu">10</div>
+<font color="#666666">相似度：</font><span class='orange' >41</a><font color="#666">%</font>
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">您的句子（灰色背景是与相似句子重合的部分）：</font><br>
+<span class='orange' >首先<span style="background:#cbcbcb">将</span>人脸<span style="background:#cbcbcb">肤色</span><span style="background:#cbcbcb">像素</span>按照严格<span style="background:#cbcbcb">的</span><span style="background:#cbcbcb">几何</span>关系去拆分，<span style="background:#cbcbcb">再</span><span style="background:#cbcbcb">将</span>其按照<span style="background:#cbcbcb">一定</span><span style="background:#cbcbcb">规则</span><span style="background:#cbcbcb">合并</span>到一起，在<span style="background:#cbcbcb">合并</span><span style="background:#cbcbcb">过程</span><span style="background:#cbcbcb">中</span><span style="background:#cbcbcb">使用</span>一些<span style="background:#cbcbcb">其他</span><span style="background:#cbcbcb">特征</span><span style="background:#cbcbcb">进行</span>验证。</span><br>
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">相似句子：</font><br>
+<span class="green">一致性和<span style="background:#cbcbcb">几何</span>约束条件<span style="background:#cbcbcb">将</span><span style="background:#cbcbcb">肤色</span><span style="background:#cbcbcb">像素</span>聚类为区域，并依据<span style="background:#cbcbcb">一定</span><span style="background:#cbcbcb">的</span><span style="background:#cbcbcb">规则</span><span style="background:#cbcbcb">进行</span><span style="background:#cbcbcb">合并</span>，<span style="background:#cbcbcb">合并</span>后或者<span style="background:#cbcbcb">合并</span><span style="background:#cbcbcb">过程</span><span style="background:#cbcbcb">中</span><span style="background:#cbcbcb">再</span><span style="background:#cbcbcb">使用</span><span style="background:#cbcbcb">其他</span><span style="background:#cbcbcb">特征</span><span style="background:#cbcbcb">进行</span>检验。</span>
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">相似句子原文片段：</font><br>
+……方面的问题：其一由于面部器官和光照因素的影响，人脸区域有可能被分割成若干个互不连通的肤色区域；其二人脸区域有可能同其他类似肤色的区域连接在一起。较为常用的一种解决方法是聚类．合并．检验的方法。该方法首先按照较为严格的颜色<span class='green'>一致性和几何约束条件将肤色像素聚类为区域，并依据一定的规则进行合并，合并后或者合并过程中再使用其他特征进行检验。</span>GarciaChristophe等根据色度的不同将肤色进一步量化为不同的类型【3l】，将类型相同并且相邻的肤色像素聚类为区域，然后按照几何……
+</td>
+</tr>
+<tr>
+<td align="left" width="100%">
+<font color="#666666">来源(学位论文)：</font><br>
+<b>篇名：</b>《基于代数特征的人脸识别方法研究》<br><b>作者：</b>韩柯<br><b>分类号：</b>TP391.41<br><b>学科专业：</b>信号与信息处理<br><b>授予学位：</b>博士<br><b>导师姓名：</b>朱秀昌<br><b>学位授予单位：</b>南京邮电大学<br><b>学位年度：</b>2007<br><b>关键词：</b>人脸识别 代数特征 人脸图像 特征提取 模式分类
+</td>
+</tr>
+</table>
+
+
+
+
+<div style="display:none;">
+<table id="xiugaijianyi" width="100%" cellpadding="3" cellspacing="3" style="margin-bottom:15px;margin-top:15px;border: 1px solid #C0C0C0;"
+bordercolorlight="#FFFFFF" bordercolordark="#FFFFFF">
+<tbody>
+<tr>
+<td width="100%">
+<div class="green" style="font-size:17px;padding-left:5px;">
+该句修改建议（ChaoXidudutishiTorpalces87sbqwopahasw4）
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="shubu">
+1
+</div>
+<span style="  padding-left:10px;font-size:15px;">
+原句与相似内容重合部分（重点修改标红部分）：
+</span>
+</td>
+</tr>
+<tr>
+<td>
+<font class="green">
+
+</font>
+</td>
+</tr>
+<tr>
+<td>
+<div class="shubu">
+2
+</div>
+<span style="  padding-left:10px;font-size:15px;">
+同义词：
+</span>
+</td>
+</tr>
+<tr>
+<td width="100%" align="left">
+<span class="red">首先：</span><span class="green">起首 </span><br/> <span class="red">按照：</span><span class="green">凭据 凭证 根据 </span><br/> <span class="red">一定：</span><span class="green">必定 必然 肯定 </span><br/> <span class="red">合并：</span><span class="green">归并 </span><br/> <span class="red">一起：</span><span class="green">一路 </span><br/> <span class="red">特征：</span><span class="green">特性 </span><br/> <span class="red">进行：</span><span class="green">举办 举行 </span><br/>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div style="display:block;">
+<a href="#">回到顶部</a>
+</div>
+
+<div style="margin-bottom:100px"></div>
+<div class="zhengwencenter">
+<p>
+检测报告由<a href="http://www.paperpass.com/" target="_blank">PaperPass</a>文献相似度检测系统生成
+</p>
+<p>
+Copyright © 2007-2016 PaperPass
+</p>
+</div>
+<div style="margin-bottom:700px"></div>
+</body>
+</html>
