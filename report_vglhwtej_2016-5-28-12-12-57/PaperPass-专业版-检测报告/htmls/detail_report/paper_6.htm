@@ -1,0 +1,557 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>PaperPass 最权威论文抄袭检测系统</title>
+<style type="text/css">
+<!--
+user_icon {
+color: #FFFFFF;
+}
+html
+{
+overflow-x:hidden;
+overflow-y:auto;
+}
+body,td,th {
+font-family: "微软雅黑";
+font-size: 12px;
+}
+h1,h2,h3,h4,h5,h6 {
+font-family: "宋体";
+}
+p{
+margin-bottom:10px;
+}
+demo_padding {
+line-height: 30px;
+}
+.zhengwen {
+padding-right: 15px;
+padding-left: 5px;
+padding-bottom:100px;
+font-size: 13px;
+line-height: 20px;
+color: #666666;
+}
+.zhengwencenter {
+padding-right: 15px;
+padding-left: 0px;
+margin-bottom:10px;
+font-size: 13px;
+line-height: 20px;
+color: #666666;
+text-align:center
+}
+.neikuang {
+background-color: #EBEBEB;
+border: 1px solid #999999;
+padding-right: 10px;
+padding-left: 10px;
+margin-top:10px;
+margin-left:25px;
+width:300px;
+}
+.shubu{
+height: 20px;
+width: 20px;
+margin-left:25px;
+background-color: #FFFFFF;
+border: 1px solid #999999;
+text-align: center;
+vertical-align: middle;
+display: block;
+color: #666666;
+}
+a.red:link {color:#FF0000}
+a.red:visited {color:#FF0000}
+a.red:hover {color:#000000}
+a.red:active {color:#000000}
+
+a.orange:link {color:#FF6600}
+a.orange:visited {color:#FF6600}
+a.orange:hover {color:#000000}
+a.orange:active {color:#000000}
+
+a.dark:link {color:#666666}
+a.dark:visited {color:#666666}
+a.dark:hover {color:#000000}
+a.dark:active {color:#000000}
+
+a.pagelink:hover {color:#000000}
+a.pagelink:active {color:#000000}
+
+.green{color:#008000}
+.gray{color:#666666}
+.red{color:#FF0000}
+.orange{color:#FF6600}
+a{TEXT-DECORATION:none}
+
+-->
+</style>
+</head>
+<body>
+
+
+<div class="zhengwen">
+<div>
+<span style="margin-left:25px"></span>
+[
+<a class="pagelink" href="paper_1.htm">首页</a>
+<a class="pagelink" href="paper_5.htm">上一页</a>
+<a class="pagelink" href="#">下一页</a>
+<a class="pagelink" href="paper_6.htm">尾页</a>
+页码：6/6页
+]
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">241</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>至此，人脸检测的过程就已经完成了。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">242</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>5.4 人脸检测实现</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">243</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><a href='../sentence_detail/499.htm' target='right' class='orange' >人脸识别之前先要对所有的样本图片进行训练，在此之前要先进行样本的采集。</a><span class='green'>首先在人脸采集页面添加EditText，使用户可以输入姓名。</span><a href='../sentence_detail/501.htm' target='right' class='orange' >在姓名输入完成后，点击保存按钮会跳转拍照页面。</a><span class='green'>这里利用了Android的Intent机制，通过给Intent设置Action：</span><span class='green'>ACTION_IMAGE_CAPTURE，可以调用系统的拍摄页面，只需要在onActivityResult中处理拍摄完成的结果即可。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">244</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>在获取到人脸图像后，还需要对图像进行裁剪，来使得人脸占图像比例尽量大。</span><span class='green'>裁剪也是利用Intent机制，给Intent设置Action：</span><span class='green'>com.android.camera.action.CROP。</span><span class='green'>并且通过Intent的putExtra方法来添加裁剪参数。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">245</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>最后需要将拍摄的图片保存到本地。</span><span class='green'>使用Android的File类可以完成。</span><span class='green'>首先通过 File的 createTempFile方法创建一个图片文件，文件名使用姓名加上当前的时间戳，再将这个图片文件传入跳转裁剪页面的 Intent对象中，</span><span class='green'>Android系统会在完成裁剪后将裁剪好的图像根据传入的图片文件保存到本地。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">246</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>5.4人脸识别流程</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">247</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>人脸识别部分使用的OpenCV的FaceRecognizer类。</span><a href='../sentence_detail/514.htm' target='right' class='orange' >在完成人脸检测部分的初始化后会进行FaceRecognizer对象的初始化。</a><a href='../sentence_detail/515.htm' target='right' class='orange' >由于要对所有的人脸样本进行训练，所以首先要获取所有人脸样本。</a><span class='green'>通过Android的文件系统，首先找到人脸样本的目录，通过File对象的listFiles可以获得所有人脸样本。</span><span class='green'>在获取到人脸样本后先要将其转换成灰度图，方法与人脸检测部分图片转换成灰度图相同。</span><span class='green'>通过createLBPFaceRecognizer方法可以新建一个FaceRecognizer对象。</span><span class='green'>训练图片只需要调用FaceRecognizer的train方法。</span><span class='green'>train方法要求传入MatVector对象和int数组。</span><span class='green'>也就是OpenCV图片向量与其对应的标签。</span><span class='green'>通过一个循环即可完成人脸样本到MatVector对象与对应标签的转换。</span><span class='green'>关键代码如下：</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">248</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><a href='../sentence_detail/524.htm' target='right' class='orange' >在人脸检测完成之后，如果检测到人脸就会调用predictFace方法来进行人脸识别，并且传入待检测的人脸。</a><span class='green'>人脸识别时会调用FaceRecognizer的predict方法，这个方法会在识别完成后返回一个label，表示识别出的人脸在人脸数组中的位置。</span><span class='green'>通过遍历即可获得识别出的人的姓名。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">249</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>在Faceview中，FaceRecognizer的ProcessImage方法回返回识别到的人的姓名。</span><span class='green'>在FaceView的onDraw方法中会判断是否有识别到的人脸，如果存在，则调用canvas的drawText方法把姓名显示到屏幕上。</span><span class='green'>效果图如下：</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">250</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>图5-4 人脸识别效果图</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">251</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>第6章 关键问题及解决方法</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">252</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>6.1 摄像头预览部分</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">253</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>在进行摄像头预览时在部分机型上未响应。</span><span class='green'>测试过后发现在部分Android6.0以上手机上未获取到摄像头权限。</span><span class='green'>Android M采用了不同于其他版本的动态权限管理，部分权限不会在安装时就获得，需要动态申请。</span><span class='green'>如果未获取到目标权限，相关操作不会有任何返回值。</span><span class='green'>需要将Target SDK设置为23或23以上，然后在代码判断是否获取到了权限，然后动态请求获取权限。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">254</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>在进行摄像头预览时程序奔溃，提示setParameters failed。</span><span class='green'>在进行摄像头预览时需要设置预览时的宽度和高度。</span><span class='green'>这时需要先获取摄像头支持的宽度和高度，然后与用于预览的 SurfaceView的宽度和高度进行比较，当宽高比小于阈值并且高度与某一支持的高度最相近的时候，</span><span class='green'>就采用这个宽高作为预览时 Camera的输出宽高。</span><span class='green'>如果设置了Camera不支持的宽高，则程序运行时就会报错。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">255</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>6.2 人脸识别部分</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">256</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>从主页面跳转到视频预览页面存在长时间的卡顿。</span><span class='green'>在初始化 FaceRecognizer的时候从本地读取分类器文件初始化 Haar分类器，从本地读取人脸样本并进行训练来初始化 OpenCV的 FaceRecognizer类，</span><a href='../sentence_detail/546.htm' target='right' class='orange' >这个过程很耗时，并且在主线程中完成，导致主线程阻塞，无法更新 UI。</a><span class='green'>Android中耗时任务一般不在主线程中执行，以防止主线程被阻塞无法更新UI，因此，需要把耗时任务放到子线程中执行。</span><span class='green'>首先新建一个线程，把初始化任务放到新的线程中执行，在完成初始化工作后再通过主线程创建的 Handler来告诉主线程初始化工作完成，</span><span class='green'>进行相应的 UI更新。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">257</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>图像数据位深度不一致导致程序报错。</span><span class='green'>在OpenCV中存在多种图像位深度，使用分类器时需要相同位深度的图像深度。</span><span class='green'>通常从摄像头获取到的图像位深度都是8U的，因此，在进行cvCreateImage操作时统一使用8U这个深度。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">258</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>第7章 总结与展望</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">259</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>随着移动互联网的发展和人们对新颖交互方式日趋强烈的需求，人脸识别在移动客户端上的应用愈来愈广泛。</span><a href='../sentence_detail/555.htm' target='right' class='orange' >本文利用Android开发技术与OpenCV图形图像库完成了在Android设备上的人脸识别功能。</a><span class='green'>现在对本文的工作进行一个总结：</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">260</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>本文首先对人脸识别的现状，发展历程以及生活场景中的应用进行了概括，然后总结对需要实现的系统进行了分析。</span><span class='green'>随后决定在Android客户端实现系统。</span><a href='../sentence_detail/559.htm' target='right' class='orange' >使用Haar分类器算法实现人脸检测部分，使用LBP算法实现人脸识别部分。</a><span class='green'>并且使用JavaCV库来实现这两个算法。</span><a href='../sentence_detail/561.htm' target='right' class='orange' >最后对人脸识别系统具体的开发流程进行了介绍。</a>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">261</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>由于时间和精力的以及研究深度上的限制，无法对算法进行深层次的探索，只是理解了算法的基本原理和库实现的方法。</span><span class='green'>在实现Android人脸识别系统后还有很大的改进空间：</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">262</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>1.没有使用运动跟踪算法。</span><span class='green'>系统对视频流中的每一帧进行人脸识别，从而实现了在视频中实时的人脸识别，但是这样效率较低，使用运动跟踪算法可以提高系统的效率。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">263</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>2.人脸样本的获取方法局限于使用摄像头获取，样本数量较少，应当可以通过其他方式导入人脸样本，从而提高系统的易用性和识别成功率。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">264</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><a href='../sentence_detail/567.htm' target='right' class='orange' >3.人脸识别成功率较低，直接使用 OpenCV中的人脸识别算法人脸识别识别错误率较高，</a><a href='../sentence_detail/568.htm' target='right' class='orange' >对获取到的人脸图片进行预处理，以提高识别成功率。</a>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">265</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>4.可以对人脸样本库的人脸图片进行预览，从而方便用户进行比对，提高用户体验。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">266</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>总而言之，人脸识别在Android端的应用会越来越多，为了提升用户体验，需要研究如何提高人脸识别的速度与成功率，以及如何简便的获取人脸样本。</span><span class='green'>只有沉下心来对算法进行深入的研究和实践，才能提高算法的效率。</span><span class='green'>这些都是我今后要去完成的。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">267</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>致谢</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">268</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><a href='../sentence_detail/574.htm' target='right' class='orange' >光阴似箭，四年大学时光即将结束，首先我要向母校武汉理工大学致以真诚的感谢。</a><span class='green'>我在这里度过了美好又充实的4年。</span><a href='../sentence_detail/576.htm' target='right' class='orange' >论文的完成，离不开我的指导老师岑丽副教授的指点，从论文的选题，撰写，</a><span class='green'>到完成，从系统的架构，实现，调试与测试岑老师都对我进行了精心的指导，</span><a href='../sentence_detail/578.htm' target='right' class='orange' >提出了宝贵的意见，能够顺利完成毕业设计，我非常感谢岑丽老师。</a><span class='green'>除此之外也要感谢身边的同学和老师对我的帮助以及鼓励，感谢他们的陪伴。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">269</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>经过这一学期的努力，我的论文终于成功完成。</span><span class='green'>论文完成过程中，遇到问题时，岑老师都会抽空为我解答。</span><a href='../sentence_detail/582.htm' target='right' class='orange' >岑老师学识渊博，治学态度严谨，工作作风优良，为人谦逊，非常值得我学习。</a><span class='green'>此外，岑丽老师对我的生活也很关心，在生活上也为我提供了帮助，很平易近人。</span><a href='../sentence_detail/584.htm' target='right' class='orange' >能成为岑老师的一名学生是很幸运的一件事。</a>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">270</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><a href='../sentence_detail/585.htm' target='right' class='orange' >我也要感谢计算机科学与技术学院的领导和老师们。</a><span class='green'>作为软件工程的学生，我感受到了学院的老师们上课时认真的态度和解答问题的耐心，他们传授的知识是我能顺利完成论文的基础。</span><span class='green'>此外，学院丰富的教学资源能够帮助我更好的学习，接触最宝贵优秀的资源。</span><span class='green'>我还要感谢四年里一起学习生活的同学们，我们一起学习，一起生活，一起玩耍，他们在各方面都给我提供了帮助，一起讨论的过程中慢慢建立起了友谊，非常感谢他们。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">271</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><a href='../sentence_detail/589.htm' target='right' class='orange' >我还要感谢我的父母，他们无私的奉献不求回报，为我提供他们能提供的最好的资源。</a><span class='green'>在我心情低落的时候会鼓励我，在我遇到挫折的时候会给我温暖的拥抱，没有他们，就无法如此顺利地完成四年的学业。</span>
+</p>
+</div>
+
+<div>
+<p>
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" width="50"><div class="shubu">272</div></td>
+<td>&nbsp;&nbsp;</td>
+</tr>
+</table>
+
+<span style="margin-left:25px"></span><span class='green'>即将毕业步入工作，只有努力工作，踏实学习才可以不辜负亲人，在社会中创造自己的价值，才能不辜负师长和朋友们对我的期望和谆谆教诲。</span>
+</p>
+</div>
+
+
+<div>
+<span style="margin-left:25px"></span>
+[
+<a class="pagelink" href="paper_1.htm">首页</a>
+<a class="pagelink" href="paper_5.htm">上一页</a>
+<a class="pagelink" href="#">下一页</a>
+<a class="pagelink" href="paper_6.htm">尾页</a>
+页码：6/6页
+]
+</div>
+
+<br>
+<div style="margin-left:8px">
+
+<div style="text-align:center;background-color:#CA122C;margin-top:30px;overflow:hidden;">
+<a href="http://www.paperpass.com/publish/index?from=ppreport_banner" target="_blank" style="display:block;"><img height="180" src="http://file.paperpass.com/images/fabiao.jpg"></a>
+</div>
+
+</div>
+</div>
+
+
+<div class="zhengwencenter">
+<p>
+检测报告由<a href="http://www.paperpass.com/" target="_blank">PaperPass</a>文献相似度检测系统生成
+</p>
+<p>
+Copyright © 2007-2016 PaperPass
+</p>
+</div>
+<div style="margin-bottom:400px"></div>
+</body>
+</html>
